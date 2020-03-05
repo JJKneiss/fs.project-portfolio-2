@@ -1,0 +1,11 @@
+/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/bin/Debug/netcoreapp3.1/Kneiss_Jamie_Final
+/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/bin/Debug/netcoreapp3.1/Kneiss_Jamie_Final.deps.json
+/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/bin/Debug/netcoreapp3.1/Kneiss_Jamie_Final.runtimeconfig.json
+/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/bin/Debug/netcoreapp3.1/Kneiss_Jamie_Final.runtimeconfig.dev.json
+/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/bin/Debug/netcoreapp3.1/Kneiss_Jamie_Final.dll
+/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/bin/Debug/netcoreapp3.1/Kneiss_Jamie_Final.pdb
+/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/obj/Debug/netcoreapp3.1/Kneiss_Jamie_Final.csprojAssemblyReference.cache
+/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/obj/Debug/netcoreapp3.1/Kneiss_Jamie_Final.AssemblyInfoInputs.cache
+/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/obj/Debug/netcoreapp3.1/Kneiss_Jamie_Final.AssemblyInfo.cs
+/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/obj/Debug/netcoreapp3.1/Kneiss_Jamie_Final.dll
+/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/obj/Debug/netcoreapp3.1/Kneiss_Jamie_Final.pdb
