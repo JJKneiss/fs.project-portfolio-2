@@ -1,10 +1,33 @@
 ﻿using System;
 namespace Kneiss_Jamie_Final
 {
-    public class Characters
+    public class Character
     {
-        public Characters()
+        public Character()
+        {
+
+        }
+    }
+    public class Race
+    {
+        public Race()
         {
         }
+    }
+
+    public class Class
+    {
+        public Class()
+        {
+
+        }
+    }
+    public interface IRace
+    {
+
+    }
+    public interface IClass
+    {
+
     }
 }
