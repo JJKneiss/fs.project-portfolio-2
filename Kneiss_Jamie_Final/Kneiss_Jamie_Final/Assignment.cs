@@ -59,31 +59,30 @@ namespace Kneiss_Jamie_Final
         }
         private void RollDice()
         {
-            Dice die;
             menu = new Menu("D4", "D6", "D8", "D10", "Percentile", "D12", "D20");
             string userSelection = Validation.ValidateString("Make a selection:", 2).ToLower();
             switch (userSelection)
             {
                 case "1":
-                    die = new D4();
+                    D4 d4 = new D4();
                     break;
                 case "2":
-                    die = new D8();
+                    D6 d6 = new D6();
                     break;
                 case "3":
-                    die = new D6();
+                    D8 d8 = new D8();
                     break;
                 case "4":
-                    die = new D10();
+                    D10 d10 = new D10();
                     break;
                 case "5":
-                    die = new Percentile();
+                    Percentile percentile = new Percentile();
                     break;
                 case "6":
-                    die = new D12();
+                    D12 d12 = new D12();
                     break;
                 case "7":
-                    die = new D20();
+                    D20 d20 = new D20();
                     break;
                 case "8":
                 case "exit":

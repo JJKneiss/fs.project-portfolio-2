@@ -57,7 +57,7 @@ namespace Kneiss_Jamie_Final
         public int Sides(int sides)
         {
             sides = 10;
-            return sides = 4;
+            return sides;
         }
         public int Roll(int roll)
         {
@@ -73,7 +73,7 @@ namespace Kneiss_Jamie_Final
         public int Sides(int sides)
         {
             sides = 10;
-            return sides = 4;
+            return sides;
         }
         public int Roll(int roll)
         {
@@ -89,7 +89,7 @@ namespace Kneiss_Jamie_Final
         public int Sides(int sides)
         {
             sides = 12;
-            return sides = 4;
+            return sides;
         }
         public int Roll(int roll)
         {
@@ -105,7 +105,7 @@ namespace Kneiss_Jamie_Final
         public int Sides(int sides)
         {
             sides = 20;
-            return sides = 4;
+            return sides;
         }
         public int Roll(int roll)
         {
