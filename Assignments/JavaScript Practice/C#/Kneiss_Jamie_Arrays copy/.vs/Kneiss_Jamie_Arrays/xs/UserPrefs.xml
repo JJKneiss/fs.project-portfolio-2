@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{7241E8AB-5407-4542-9D85-F3B7B7E02854}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kneiss_Jamie_Arrays/Program.cs">
+    <Files>
+      <File FileName="Kneiss_Jamie_Arrays/Program.cs" Line="76" Column="41" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Kneiss_Jamie_Arrays" expanded="True">
+            <Node name="Kneiss_Jamie_Arrays" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Kneiss__Jamie__Arrays PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

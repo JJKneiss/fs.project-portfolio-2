@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{2D6E5445-52A9-4885-806B-FCA1555F3307}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kneiss_Jamie_Lists/Program.cs">
+    <Files>
+      <File FileName="Kneiss_Jamie_Lists/Program.cs" Line="45" Column="7" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Kneiss_Jamie_Lists" expanded="True">
+            <Node name="Kneiss_Jamie_Lists" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Kneiss__Jamie__Lists PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

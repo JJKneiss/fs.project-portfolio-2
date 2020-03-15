@@ -1,0 +1,22 @@
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/bin/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.deps.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/bin/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.runtimeconfig.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/bin/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.runtimeconfig.dev.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/bin/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/bin/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.pdb
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/obj/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.csprojAssemblyReference.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/obj/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.csproj.CoreCompileInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/obj/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.AssemblyInfoInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/obj/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.AssemblyInfo.cs
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/obj/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/obj/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.pdb
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/bin/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.deps.json
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/bin/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.runtimeconfig.json
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/bin/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.runtimeconfig.dev.json
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/bin/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/bin/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.pdb
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/obj/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.csprojAssemblyReference.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/obj/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.csproj.CoreCompileInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/obj/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.AssemblyInfoInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/obj/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.AssemblyInfo.cs
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/obj/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss-Jamie_ShirtSizes/Kneiss-Jamie_ShirtSizes/obj/Debug/netcoreapp2.1/Kneiss-Jamie_ShirtSizes.pdb

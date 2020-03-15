@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{35B980D6-7F88-41C8-B01A-124C5FFE95F1}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kneiss_Jamie_CookieCounter/Program.cs">
+    <Files>
+      <File FileName="Kneiss_Jamie_CookieCounter/Program.cs" Line="169" Column="17" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Kneiss_Jamie_CookieCounter" expanded="True">
+            <Node name="Kneiss_Jamie_CookieCounter" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Kneiss__Jamie__CookieCounter PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

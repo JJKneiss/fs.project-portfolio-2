@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{0FACA84E-3F99-4EAC-A8A5-53202FFAA2CA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kneiss_Jamie_GroceryCalc/Program.cs">
+    <Files>
+      <File FileName="Kneiss_Jamie_GroceryCalc/Program.cs" Line="44" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Kneiss_Jamie_GroceryCalc" expanded="True">
+            <Node name="Kneiss_Jamie_GroceryCalc" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Kneiss__Jamie__GroceryCalc PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

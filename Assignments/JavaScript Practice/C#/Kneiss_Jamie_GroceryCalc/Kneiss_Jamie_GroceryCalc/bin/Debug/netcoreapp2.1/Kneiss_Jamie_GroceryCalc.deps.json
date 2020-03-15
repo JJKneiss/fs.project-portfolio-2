@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "Kneiss_Jamie_GroceryCalc/1.0.0": {
+        "runtime": {
+          "Kneiss_Jamie_GroceryCalc.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Kneiss_Jamie_GroceryCalc/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

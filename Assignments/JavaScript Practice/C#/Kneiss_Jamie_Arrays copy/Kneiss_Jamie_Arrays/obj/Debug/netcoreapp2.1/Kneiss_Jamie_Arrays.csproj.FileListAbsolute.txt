@@ -1,0 +1,11 @@
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Arrays/Kneiss_Jamie_Arrays/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Arrays.deps.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Arrays/Kneiss_Jamie_Arrays/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Arrays.runtimeconfig.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Arrays/Kneiss_Jamie_Arrays/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Arrays.runtimeconfig.dev.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Arrays/Kneiss_Jamie_Arrays/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Arrays.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Arrays/Kneiss_Jamie_Arrays/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Arrays.pdb
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Arrays/Kneiss_Jamie_Arrays/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Arrays.csprojAssemblyReference.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Arrays/Kneiss_Jamie_Arrays/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Arrays.csproj.CoreCompileInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Arrays/Kneiss_Jamie_Arrays/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Arrays.AssemblyInfoInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Arrays/Kneiss_Jamie_Arrays/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Arrays.AssemblyInfo.cs
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Arrays/Kneiss_Jamie_Arrays/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Arrays.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Arrays/Kneiss_Jamie_Arrays/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Arrays.pdb

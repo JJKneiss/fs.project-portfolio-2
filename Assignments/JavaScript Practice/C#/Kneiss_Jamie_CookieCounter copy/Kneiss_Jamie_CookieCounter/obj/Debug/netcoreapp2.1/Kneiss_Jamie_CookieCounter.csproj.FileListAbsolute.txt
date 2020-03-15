@@ -1,0 +1,11 @@
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_CookieCounter/Kneiss_Jamie_CookieCounter/obj/Debug/netcoreapp2.1/Kneiss_Jamie_CookieCounter.csprojAssemblyReference.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_CookieCounter/Kneiss_Jamie_CookieCounter/obj/Debug/netcoreapp2.1/Kneiss_Jamie_CookieCounter.csproj.CoreCompileInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_CookieCounter/Kneiss_Jamie_CookieCounter/obj/Debug/netcoreapp2.1/Kneiss_Jamie_CookieCounter.AssemblyInfoInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_CookieCounter/Kneiss_Jamie_CookieCounter/obj/Debug/netcoreapp2.1/Kneiss_Jamie_CookieCounter.AssemblyInfo.cs
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_CookieCounter/Kneiss_Jamie_CookieCounter/bin/Debug/netcoreapp2.1/Kneiss_Jamie_CookieCounter.deps.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_CookieCounter/Kneiss_Jamie_CookieCounter/bin/Debug/netcoreapp2.1/Kneiss_Jamie_CookieCounter.runtimeconfig.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_CookieCounter/Kneiss_Jamie_CookieCounter/bin/Debug/netcoreapp2.1/Kneiss_Jamie_CookieCounter.runtimeconfig.dev.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_CookieCounter/Kneiss_Jamie_CookieCounter/bin/Debug/netcoreapp2.1/Kneiss_Jamie_CookieCounter.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_CookieCounter/Kneiss_Jamie_CookieCounter/bin/Debug/netcoreapp2.1/Kneiss_Jamie_CookieCounter.pdb
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_CookieCounter/Kneiss_Jamie_CookieCounter/obj/Debug/netcoreapp2.1/Kneiss_Jamie_CookieCounter.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_CookieCounter/Kneiss_Jamie_CookieCounter/obj/Debug/netcoreapp2.1/Kneiss_Jamie_CookieCounter.pdb

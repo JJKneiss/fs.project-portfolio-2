@@ -1,0 +1,21 @@
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/obj/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.csprojAssemblyReference.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/obj/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.csproj.CoreCompileInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/obj/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.AssemblyInfoInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/obj/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.AssemblyInfo.cs
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/bin/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.deps.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/bin/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.runtimeconfig.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/bin/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.runtimeconfig.dev.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/bin/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/bin/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.pdb
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/obj/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/obj/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.pdb
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/bin/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.deps.json
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/bin/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.runtimeconfig.json
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/bin/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.runtimeconfig.dev.json
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/bin/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/bin/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.pdb
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/obj/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.csprojAssemblyReference.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/obj/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.AssemblyInfoInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/obj/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.AssemblyInfo.cs
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/obj/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_GroceryCalc/Kneiss_Jamie_GroceryCalc/obj/Debug/netcoreapp2.1/Kneiss_Jamie_GroceryCalc.pdb

@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{132DB05F-71DC-4A97-B8E1-32B717709763}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kneiss-Jamie_ShirtSizes/Program.cs">
+    <Files>
+      <File FileName="Kneiss-Jamie_ShirtSizes/Program.cs" Line="17" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Kneiss-Jamie_ShirtSizes" expanded="True">
+            <Node name="Kneiss-Jamie_ShirtSizes" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Kneiss-Jamie__ShirtSizes PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
