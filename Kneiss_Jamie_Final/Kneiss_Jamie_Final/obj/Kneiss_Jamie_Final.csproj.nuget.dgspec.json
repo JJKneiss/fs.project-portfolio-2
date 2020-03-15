@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/Kneiss_Jamie_Final.csproj": {}
+    "/Applications/Work/School/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/Kneiss_Jamie_Final.csproj": {}
   },
   "projects": {
-    "/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/Kneiss_Jamie_Final.csproj": {
+    "/Applications/Work/School/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/Kneiss_Jamie_Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/Kneiss_Jamie_Final.csproj",
+        "projectUniqueName": "/Applications/Work/School/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/Kneiss_Jamie_Final.csproj",
         "projectName": "Kneiss_Jamie_Final",
-        "projectPath": "/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/Kneiss_Jamie_Final.csproj",
+        "projectPath": "/Applications/Work/School/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/Kneiss_Jamie_Final.csproj",
         "packagesPath": "/Users/jamiek/.nuget/packages/",
-        "outputPath": "/Applications/School Work/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/obj/",
+        "outputPath": "/Applications/Work/School/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

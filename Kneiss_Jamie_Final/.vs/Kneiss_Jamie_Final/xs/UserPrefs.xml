@@ -2,7 +2,6 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Kneiss_Jamie_Final/Assignment.cs">
     <Files>
       <File FileName="Kneiss_Jamie_Final/Assignment.cs" Line="79" Column="55" />
-      <File FileName="../../../Resources/Code/Library C#/Library.cs" />
       <File FileName="Kneiss_Jamie_Final/Dice.cs" />
       <File FileName="Kneiss_Jamie_Final/Characters.cs" />
       <File FileName="Kneiss_Jamie_Final/Classes.cs" />
@@ -14,7 +13,7 @@
         <State name="__root__">
           <Node name="Kneiss_Jamie_Final" expanded="True">
             <Node name="Kneiss_Jamie_Final" expanded="True">
-              <Node name="Assignment.cs" selected="True" />
+              <Node name="Library.cs" selected="True" />
             </Node>
           </Node>
         </State>

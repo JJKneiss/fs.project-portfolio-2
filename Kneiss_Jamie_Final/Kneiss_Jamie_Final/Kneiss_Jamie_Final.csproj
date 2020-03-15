@@ -5,9 +5,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="..\..\..\..\Resources\Code\Library C#\Library.cs">
-      <Link>Library.cs</Link>
-    </Compile>
-  </ItemGroup>
 </Project>
