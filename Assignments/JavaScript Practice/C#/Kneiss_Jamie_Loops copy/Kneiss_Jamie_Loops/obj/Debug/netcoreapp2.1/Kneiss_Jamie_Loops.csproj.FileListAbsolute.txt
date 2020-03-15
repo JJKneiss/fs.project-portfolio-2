@@ -1,0 +1,22 @@
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.csprojAssemblyReference.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.csproj.CoreCompileInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.AssemblyInfoInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.AssemblyInfo.cs
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.deps.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.runtimeconfig.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.runtimeconfig.dev.json
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.pdb
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.pdb
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.deps.json
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.runtimeconfig.json
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.runtimeconfig.dev.json
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/bin/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.pdb
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.csprojAssemblyReference.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.csproj.CoreCompileInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.AssemblyInfoInputs.cache
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.AssemblyInfo.cs
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.dll
+/Users/jamiek/Desktop/School Work/SDI 1907/SDI 1907/Kneiss_Jamie_Loops/Kneiss_Jamie_Loops/obj/Debug/netcoreapp2.1/Kneiss_Jamie_Loops.pdb

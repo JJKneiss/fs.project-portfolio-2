@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{8098E056-7375-492B-B41D-FFF80CBD5574}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kneiss_Jamie_Loops/Program.cs">
+    <Files>
+      <File FileName="Kneiss_Jamie_Loops/Program.cs" Line="266" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Kneiss__Jamie__Loops PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

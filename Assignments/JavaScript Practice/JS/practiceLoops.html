@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+	<title>
+		Hello World
+	</title>
+</head>
+<body>
+	<div class="center">
+	</div>
+	<script>
+        //Set Divider
+            console.log("========================= ========================= =========================");
+            let nomenTuum = prompt("Enter your name");
+        //Validate
+            while (!nomenTuum)
+            {
+                nomenTuum = prompt("Please Don't leave this blank. Enter your name:");
+            }
+        //User Prompt: Balance
+            console.log("How much is in that piggy bank of yours, " + nomenTuum + "?");
+            let balancelet = prompt();
+        //Cast: To let
+            let balanceRaw;
+        //Validate
+            while (!let.TryParse(balancelet, out balanceRaw))
+            {
+                console.log("Your response is either not a number or not in the right format.");
+            //User Prompt: Resubmit Response
+                console.log("Please resubmit your response.");
+                balancelet = prompt();
+            }
+        //Round: To 2
+            balanceRaw = (let)Math.Round(balanceRaw, 2);
+        //User Prompt: Money Added
+            console.log("How much is added each month?");
+            let addlet = prompt();
+        //Cast: To let
+            let addRaw;
+        //Validate
+            while (!let.TryParse(addlet, out addRaw))
+            {
+                console.log("Your response is either not a number or not in the right format.");
+            //User Prompt: Resubmit Response
+                console.log("Please resubmit your response.");
+                addlet = prompt();
+            }
+        //Round: To 2
+            addRaw = (let)Math.Round(addRaw, 2);
+        //Create: Loop; For: 12 Months
+            for (let monthNum = 1; monthNum <= 12; monthNum++)
+            {
+            //Calculate: Total
+                let totalBalance = balanceRaw += addRaw;
+            //Roundd: To 2
+                totalBalance = (let)Math.Round(totalBalance, 2);
+            //Conditional: If: Month is 1, 2, or 12
+                if (monthNum == 1 || monthNum == 2 || monthNum == 12)
+                {
+                //Conditional: If month is one, display text.
+                    if (monthNum == 1)
+                    {
+                        console.log("Your total for this month is $" + totalBalance + ".");
+                    }
+                //Conditional: If: Month is two, Display Text.
+                    else if (monthNum == 2)
+                    {
+                        console.log("Your total for next month will be $" + totalBalance + ".");
+                    }
+                //Conditional: If: Month is twelve: Display Text
+                    else if (monthNum == 12)
+                    {
+                        console.log("Your total after a year will be $" + totalBalance + ".");
+                    }
+                }
+            //Conditional: Else: Display Text
+                else
+                {
+                    console.log("Your total for month " + monthNum + " will be $" + totalBalance + ".");
+                }
+            }
+
+            /*Test 1
+             * 
+             * Hey there, what's your name?
+             * sg
+             * How much is in that piggy bank of yours, sg?
+             * 23
+             * How much is added each month?
+             * 3
+             * Your total for this month is $26.
+             * Your total for next month will be $29.
+             * Your total for month 3 will be $32.
+             * Your total for month 4 will be $35.
+             * Your total for month 5 will be $38.
+             * Your total for month 6 will be $41.
+             * Your total for month 7 will be $44.
+             * Your total for month 8 will be $47.
+             * Your total for month 9 will be $50.
+             * Your total for month 10 will be $53.
+             * Your total for month 11 will be $56.
+             * Your total after a year will be $59.
+             */
+
+        //Delay Output
+            
+        //Set Divider
+            console.log("========================= ========================= =========================");
+        //Delay Output
+            
+        //User Prompt: 
+            console.log("Hey, " + nomenTuum + ", what's the timer on the countdown, again?");
+                let elNumero = prompt();
+        //Cast: To let
+            let theNum;
+        //Validate
+            while (!let.TryParse(elNumero, out theNum))
+            {
+                console.log("Your response is either not formatted properly or not an leteger.");
+            //User Prompt: Resubmit Response
+                console.log("Please resubmit your response.");
+                elNumero = prompt();
+            }
+            console.log("Blastoff in T-");
+        //Loop: While Number > 0, Count Down
+            while (theNum >= 0)
+            {
+            //Delay Output
+                (500);
+                console.log(theNum);
+                theNum--;
+            }
+            console.log("BLASTOFF");
+
+            /*
+             * Hey, sg, what's the timer on the countdown, again?
+             * 3
+             * Blastoff in T-
+             * 3
+             * 2
+             * 1
+             * 0
+             * BLASTOFF
+             * ==========
+             */
+
+        //Delay Output
+            
+        //Set Divider
+            console.log("========================= ========================= =========================");
+        //Delay Output
+            
+        //User Prompt: Remaining Donuts
+            console.log("What's up " + nomenTuum + ", how many donuts are left?");
+            let remainderlet = prompt();
+        //Cast: To let
+            let remainderRaw;
+        //Validate
+            while (!let.TryParse(remainderlet, out remainderRaw) || (remainderRaw <= 0))
+            {
+            //Conditional: If: Not a Number
+                if (!let.TryParse(remainderlet, out remainderRaw))
+                {
+                //User Prompt: Remaining Donuts
+                    console.log("That's... not a number, or you're not spelling it right." + nomenTuum + ", how many are left, again?");
+                }
+            //Conditional: Else If: Below Zero
+                else 
+                {
+                //User Prompt: Remaining Donuts
+                    console.log("Come on, " + nomenTuum + ", you're lying. How many are really left?");
+                }
+                remainderlet = prompt();
+            }
+        //User Prompt: WantedDonuts
+            console.log("Cool, how many do you want?");
+            let wantslet = prompt();
+            let wantsRaw;
+        //Validate
+            while (!let.TryParse(wantslet, out wantsRaw) || wantsRaw > 3 || wantsRaw < 0)
+            {
+            //Conditional
+                if (!let.TryParse(wantslet, out wantsRaw))
+                {
+                    console.log("That's... not a number, or you're not writing it right." + nomenTuum + ", how many do you want?");
+                }
+            //Conditional: If Desired Donuts is > 3, Display Text
+                else if (wantsRaw > 3)
+                {
+                //User Prompt: Resubmit Response
+                    console.log("Come on, " + nomenTuum + ", don't be a hog. Try less than 4?");
+                }
+            //Conditional: If Desired Donuts is < 0, Display Text
+                else if (wantsRaw < 0)
+                {
+                //User Prompt: Resubmit Response
+                    console.log("That's... literally impossible, try again dude.");
+                }
+                wantslet = prompt();
+            }
+        //Calculate: Remaining Donuts
+            let finalDonuts = remainderRaw - wantsRaw;
+        //Loop: While Remainder > 0, Prompt User
+            while (finalDonuts > 0)
+            {
+                console.log("Awesome, there are " + finalDonuts + " donuts left.");
+            //User Prompt: Desired Donutss
+                console.log("Who wants more donuts?");
+                let newNeeds = prompt();
+            //Cast: To let
+                let newWants;
+            //Validate
+                while (!let.TryParse(newNeeds, out newWants))
+                {
+                    console.log("Your response is either not formatted properly or not an leteger.");
+                    console.log("Please resubmit your response.");
+                    newNeeds = prompt();
+                }
+            //Calculate: New Remainder
+                finalDonuts = finalDonuts - newWants;
+            }
+        //Conditional: If Remainder < 0, Display Text.
+            if (finalDonuts <= 0)
+            {
+                if (finalDonuts < 0)
+                {
+                    let oweDonuts = finalDonuts * -2 / 2;
+                    if (oweDonuts == 1)
+                        console.log("Okay so I'll owe you " + oweDonuts + " donut, then.");
+                    else
+                    {
+                        console.log("Okay so I'll owe you " + oweDonuts + " donut, then.");
+                    }
+                }
+            //Conditional: If Remainder = 0, End Program
+                else if (finalDonuts == 0)
+                {
+                    console.log("Alright, that's the last of the donuts. Enjoy.");
+                }
+            
+                /*
+                 * What's up sg, how many donuts are left?
+                 * 5
+                 * Cool, how many do you want?
+                 * 3
+                 * Who wants more donuts?
+                 * 2
+                 * Awesome, there are -1 donuts left.
+                 * Okay so I'll owe you 1 donuts, then.
+                 */
+
+            //End Program
+	</script>
+</body>

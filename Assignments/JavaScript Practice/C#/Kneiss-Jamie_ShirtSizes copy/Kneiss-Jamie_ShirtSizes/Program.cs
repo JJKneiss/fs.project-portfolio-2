@@ -110,6 +110,5 @@ namespace Kneiss_Jamie_ShirtSizes
 
             return (smallInt + medInt + larInt + xLarInt + xxLarInt);
         }
-
     }
 }

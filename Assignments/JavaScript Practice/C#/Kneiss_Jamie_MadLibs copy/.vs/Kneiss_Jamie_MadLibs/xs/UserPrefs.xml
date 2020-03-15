@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{23603B6F-E0C7-440E-AAD6-D234E4641265}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kneiss_Jamie_MadLibs/Program.cs">
+    <Files>
+      <File FileName="Kneiss_Jamie_MadLibs/Program.cs" Line="14" Column="16" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Kneiss_Jamie_MadLibs" expanded="True">
+            <Node name="Kneiss_Jamie_MadLibs" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Kneiss__Jamie__MadLibs PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
