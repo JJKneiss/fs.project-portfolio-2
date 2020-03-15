@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+<title>Rogue's Gallery Create Character</title>
+</head>
+<body>
+	<header style="text-align: center; padding-top: 1px; margin-top: 0px;">
+		<h1 style="margin-bottom: 0px; font-size: 68px; color: #2D5D5F;">Rogue's Gallery</h1>
+		<p style="margin-top: 0px; font-size: 24px; color: burlywood">Adventure is a Tavern Away</p>
+    </header>
+    <div>
+		<ul>
+			<li class="dropdown">
+					<button class="dropbtn">Characters</button>
+					<div class="dropdown-content">
+					  <a href="createCharacter.html">Create</a>
+					  <a href="viewCharacter.html">View</a>
+					</div>
+			</li>
+			<li>
+				<div>
+					<a href="index.html"><img src="https://img.icons8.com/ios-filled/50/000000/icosahedron.png" alt = "homelogo"></a>
+				</div>				
+			</li>
+			<li class="dropdown">
+					<button class="dropbtn">Dice Tests</button>
+					<div class="dropdown-content">
+						<a href="testCombat.html">Combat Test</a>
+						<a href="rollDice.html">Dice Roll</a>
+					</div>
+			</li>
+		</ul>   
+	</div>    
+
+<form>
+    <p>Let's get started</p>
+    <h2-color>Name: </h2-color>
+    <input id="name" type="text">
+    <h2>Race
+        <select id = "races" name = "Race">
+            <option value="elf">Elf</option>
+            <option value="human">Human</option>
+            <option value="orc">Orc</option>
+            <option value="dwarf">Dwarf</option>
+        </select>
+    </h2>
+    <h2>Class
+        <select id= "classes" name= "Class">
+            <option value="fighter">Fighter</option>
+            <option value="bard">Bard</option>
+            <option value="rogue">Rogue</option>
+            <option value="wizard">Wizard</option>
+        </select>   
+    </h2>
+</form>
+<button id="submitForm" type="submit">Submit</button>
+
+<p id = "your character"></p>
+<script type = "text/javascript" src="js/create.js"></script>
+
+</body>
+</html>
