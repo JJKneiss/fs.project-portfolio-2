@@ -85,29 +85,6 @@ p
   display:inline-block;
   padding:10px;
 }
-a, a:active, a:hover, a:visited a:link
-{
-  color:black !important;
-  text-decoration: none;
-}
-ul
-{
-  list-style-type: none;  
-  margin: 0;
-  padding: 0;
-  display: inline-block;  
-  text-align: center;
-}
-li 
-{
-  font-size: 24px;
-  margin: 25px;
-  color: black;
-  display: inline-block;
-  background: none;
-  border: none;
-  text-decoration: none;
-}
 #footer 
 {
   position: fixed;

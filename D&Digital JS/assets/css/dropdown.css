@@ -1,3 +1,26 @@
+a, a:active, a:hover, a:visited a:link
+{
+  color:black !important;
+  text-decoration: none;
+}
+ul
+{
+  list-style-type: none;  
+  margin: 0;
+  padding: 0;
+  display: inline-block;  
+  text-align: center;
+}
+li 
+{
+  font-size: 24px;
+  margin: 25px;
+  color: black;
+  display: inline-block;
+  background: none;
+  border: none;
+  text-decoration: none;
+}
 .dropbtn 
 {
   background-color: #2D5D5F;
@@ -35,4 +58,4 @@
 }
 .dropdown-content a:hover {background-color: #ddd;}
 .dropdown:hover .dropdown-content {display: table;}
-.dropdown:hover .dropbtn {background-color: black}
+.dropdown:hover .dropbtn {background-color: black}s
