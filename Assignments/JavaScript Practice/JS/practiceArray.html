@@ -9,74 +9,69 @@
 	<div class="center">
 	</div>
 	<script>
-        //Set Divider
-        Console.WriteLine("========================= ========================= =========================");
-        //Prompt User: Name
-        Console.WriteLine("What's your name?");
-        string nomenTuum = Console.ReadLine();
+        let userName = prompt("What's your name?");
         //Validate
-        while (string.IsNullOrWhiteSpace(nomenTuum))
+        while (!userName)
         {
-            Console.WriteLine("That's... not a real name, or you're not writing it right.");
-            //User Prompt: Resubmit Name
-            Console.WriteLine("What's your name, again?");
-            nomenTuum = Console.ReadLine();
+            userName = prompt("What's your name, again?");
         }
         //Prompt User: Book Number
-        Console.WriteLine("How many books?");
-        string bookBuy = Console.ReadLine();
-        int bookNum;
+        let bookBuy = prompt("How many books are you buying?");
         //Validate
-        while (!int.TryParse(bookBuy, out bookNum))
+        while (!bookBuy)
         {
-            Console.WriteLine("That's... not a number, or you're not writing it right, " + nomenTuum +".");
-            //User Prompt: Books Bought
-            Console.WriteLine("How many books are you buying?");
-            bookBuy = Console.ReadLine();
+            bookBuy = prompt("How many books, again?");
         }
         //Create: Array
-        decimal[] bookArray = new decimal[bookNum];
+        let bookArray = [];
+        let sum;
         //Create Loop
-        for (int i = 0; i < bookArray.Length; i++)
+        for (let index = 0; index < bookBuy; index++)
         {
             //Prompt User: Book Price
-            Console.WriteLine("How much for this book?");
-            string bookCost = Console.ReadLine();
+            let bookCost = prompt("How much for this book?");
             //Validate
-            while (!decimal.TryParse(bookCost, out bookArray[i]))
+            
+            while (!bookCost || isNaN(bookCost.trim('$')))
             {
-                Console.WriteLine("That's... not a number, or you're not writing it right, " + nomenTuum + ".");
-                Console.WriteLine("How many books are you buying?");
-                bookCost = Console.ReadLine();
+                bookCost = prompt("How much for this book?");
             }
+            //let cost = parseFloat(bookCost);
+            sum += parseFloat(bookCost);
+            //bookCost.trim('$');
+            //bookArray[index] = bookCost;
+            bookArray.push(parseFloat(bookCost));
         }
-        decimal sum = 0;
+        //let sum;
         //Create Loop
-        for (int i = 0; i < bookArray.Length; i++)
+        // for (let index = 0; index < bookArray.length; index++)
+        // {
+        //     sum = sum + bookArray[index];
+        // }
+    //     var sum = bookArray.reduce(function(a, b){
+    //     return a + b;
+    // }, 0);
+
+        //sum = Math.round(sum, 2);
+        if (bookBuy >= 2)
         {
-            sum += bookArray[i];
-        }
-        //Round: To 2
-        sum = (decimal)Math.Round(sum, 2);
-        //Create Conditional
-        if (bookNum == 0)
-        {
-            Console.WriteLine("Your total is $" + sum + " for " + bookArray.Length + " book.");
+            alert(`Your total is ${sum} for ${bookArray.length} books.`);
         }
         else
         {
-            Console.WriteLine("Your total is $" + sum + " for " + bookArray.Length + " books.");
+            alert(`Your total is $${sum} for ${bookArray.length} book.`);
         }
-        
+
         //Create Array
         let someThings = ["monitor", "computer", "desk", "keyboard", "mouse", "chair"];
+
         //Create Array
         let someColors = ["black", "gray", "brown", "green", "orange", "blue"];
-              
+
         //Create Loop
         for (let index = 0; index < someColors.length; index++)
         {
-            Console.WriteLine(`The main color of the ${someThings[index]} is ${someColors[index]}.`);
+            alert(`The main color of the ${someThings[index]} is ${someColors[index]}.`);
         }
 	</script>
 </body>
