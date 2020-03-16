@@ -1,81 +1,4 @@
-let userAnswer = prompt("Hello! Welcome to Shirts R Us! What is your shirt size?" + 
-"\r\nSmall, Medium, Large, X-Large, XX-Large");
-let shirtArray = ["XX-Large", "Medium", "Large", "Small", "XX-Large", "Small", "Large", "XX-Large", "Large", "X-Large", "Medium", "Medium"];
-let smallShirt = 0;
-let mediumShirt = 0;
-let largeShirt = 0;
-let xLargeShirt = 0;
-let xxLargeShirt = 0;
-
-for (let index = 0; index < shirtArray.length; index++)
-{
-    if (shirtArray[index] == "Small")
-    {
-		smallShirt++;
-		console.log(smallShirt);
-    }
-    else if (shirtArray[index] == "Medium")
-    {
-		mediumShirt++;
-		console.log(mediumShirt);
-    }
-    else if (shirtArray[index] == "Large")
-    {
-		largeShirt++;
-		console.log(largeShirt);
-    }
-    else if (shirtArray[index] == "X-Large")
-    {
-		xLargeShirt++;
-		console.log(xLargeShirt);
-    }
-    else if (shirtArray[index] == "XX-Large")
-    {
-		xxLargeShirt++;
-		console.log(xxLargeShirt);
-    }
-}
-console.log("Your order will consist of: ");
-	if (smallShirt== 1)
-	{
-        console.log(`${smallShirt} small shirt, `);
-    }
-    else if (smallShirt > 1)
-    {
-        console.log(`${smallShirt} small shirts, `);
-    }
-    if (mediumShirt == 1)
-    {
-        console.log(`${mediumShirt} medium shirt, `);
-    }
-    else if (mediumShirt > 1)
-    {
-        console.log(`${mediumShirt} medium shirts, `);
-    }
-    if (largeShirt == 1)
-    {
-        console.log(`${mediumShirt} large shirt, `);
-    }
-    else if (largeShirt > 1)
-    {
-        console.log(`${largeShirt} large shirts, `);
-    }
-    if (xLargeShirt == 1)
-    {
-        console.log(`${xLargeShirt} x-large shirt, `);
-    }
-    else if (xLargeShirt > 1)
-    {
-        console.log(`${xLargeShirt} x-large shirts, `);
-    }
-    if (xxLargeShirt == 1)
-    {
-        console.log(`${xxLargeShirt} xx-large shirt.`);
-    }
-    else if (xxLargeShirt > 1)
-    {
-        console.log(`${xxLargeShirt} xx-large shirts.`);
-    }<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en"></html>
 <head>
 	<title>
@@ -86,83 +9,45 @@ console.log("Your order will consist of: ");
 	<div class="center">
 	</div>
 	<script>
-		let userAnswer = prompt("Hello! Welcome to Shirts R Us! What is your shirt size?" + 
-"\r\nSmall, Medium, Large, X-Large, XX-Large");
-let shirtArray = ["XX-Large", "Medium", "Large", "Small", "XX-Large", "Small", "Large", "XX-Large", "Large", "X-Large", "Medium", "Medium"];
-let smallShirt = 0;
-let mediumShirt = 0;
-let largeShirt = 0;
-let xLargeShirt = 0;
-let xxLargeShirt = 0;
+        let nomenTuum = prompt("Hey there, what's your name?");
 
-for (let index = 0; index < shirtArray.length; index++)
-{
-    if (shirtArray[index] == "Small")
-    {
-		smallShirt++;
-		console.log(smallShirt);
-    }
-    else if (shirtArray[index] == "Medium")
-    {
-		mediumShirt++;
-		console.log(mediumShirt);
-    }
-    else if (shirtArray[index] == "Large")
-    {
-		largeShirt++;
-		console.log(largeShirt);
-    }
-    else if (shirtArray[index] == "X-Large")
-    {
-		xLargeShirt++;
-		console.log(xLargeShirt);
-    }
-    else if (shirtArray[index] == "XX-Large")
-    {
-		xxLargeShirt++;
-		console.log(xxLargeShirt);
-    }
-}
-console.log("Your order will consist of: ");
-	if (smallShirt== 1)
-	{
-        console.log(`${smallShirt} small shirt, `);
-    }
-    else if (smallShirt > 1)
-    {
-        console.log(`${smallShirt} small shirts, `);
-    }
-    if (mediumShirt == 1)
-    {
-        console.log(`${mediumShirt} medium shirt, `);
-    }
-    else if (mediumShirt > 1)
-    {
-        console.log(`${mediumShirt} medium shirts, `);
-    }
-    if (largeShirt == 1)
-    {
-        console.log(`${mediumShirt} large shirt, `);
-    }
-    else if (largeShirt > 1)
-    {
-        console.log(`${largeShirt} large shirts, `);
-    }
-    if (xLargeShirt == 1)
-    {
-        console.log(`${xLargeShirt} x-large shirt, `);
-    }
-    else if (xLargeShirt > 1)
-    {
-        console.log(`${xLargeShirt} x-large shirts, `);
-    }
-    if (xxLargeShirt == 1)
-    {
-        console.log(`${xxLargeShirt} xx-large shirt.`);
-    }
-    else if (xxLargeShirt > 1)
-    {
-        console.log(`${xxLargeShirt} xx-large shirts.`);
-    }
+        let nanaPrice = prompt("Mind giving me the cost of a banana?");
+        nanaPrice = Math.Round(nanasPrice, 2);
+        let nanaAmount = prompt("How many bananas shall I get?");
+        let totalNanas = nanaPrice * nanaAmount;
+        
+        let beefPrice = prompt("Now how about a beef brisket?");
+        beefPrice = Math.Round(beefPrice, 2);
+        let beefAmount = prompt("How many shall I get?");
+        let totalBeef = beefPrice * beefAmount;
+
+        let applePrice = prompt("Awesome, now how about an apple pie? I love warm apple pie. ^-^");
+        applePrice = Math.Round(applePrice, 2);       
+        let appleAmount = prompt("How many shall I get?");
+        let totalApples = applePrice * appleAmount;
+        
+        let salesTax = prompt("As an integer, what's the sales tax around here?");
+        salesTax /= 100;
+
+        let nanaTax = totalNanas * salesTax;
+        let finalNanas = nanaTax + totalNanas;
+        finalNanas = Math.Round(finalNanas, 2);
+
+        let beefTax = totalBeef * salesTax;
+        let finalBeef = beefTax + totalBeef;
+        finalBeef = Math.Round(finalBeef, 2);
+
+        let appleTax = totalApples * salesTax;
+        let finalApples = appleTax + totalApples;
+        finalApples = Math.Round(finalApples, 2);
+
+        let total = totalNanas + totalBeef + totalApples;
+        let totalTax = appleTax+ beefTax + nanaTax;
+        totalTax = Math.Round(totalTax, 2);
+
+        let totalGrand = total + totalTax;
+
+        alert(`Excluding Tax; Bananas: $${totalNanas}, Beef Brisket: $${totalBeef}, Apple Pie: $${totalApples}. That all totals out to ${total}.`);
+        alert(`Including Tax; Bananas: ${finalNanas}, Beef Brisket: ${finalBeef}, Apple Pie: ${finalApples}. That sums $${totalTax} in taxes. Coming to a grand total of ${totalGrand}.`);
 	</script>
 </body>

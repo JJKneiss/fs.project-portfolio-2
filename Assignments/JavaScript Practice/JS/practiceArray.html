@@ -9,89 +9,74 @@
 	<div class="center">
 	</div>
 	<script>
-
-    let userAnswer = prompt("Hello! Welcome to Shirts R Us! What is your shirt size?" + 
-    "\r\nSmall, Medium, Large, X-Large, XX-Large");
-
-    let shirtArray = ["XX-Large", "Medium", "Large", "Small", "XX-Large", "Small", "Large", "XX-Large", "Large", "X-Large", "Medium", "Medium"];
-    
-    let smallShirt = 0;
-    let mediumShirt = 0;
-    let largeShirt = 0;
-    let xLargeShirt = 0;
-    let xxLargeShirt = 0;
-
-    for (let index = 0; index < shirtArray.length; index++)
-    {
-        if (shirtArray[index] == "Small")
+        //Set Divider
+        Console.WriteLine("========================= ========================= =========================");
+        //Prompt User: Name
+        Console.WriteLine("What's your name?");
+        string nomenTuum = Console.ReadLine();
+        //Validate
+        while (string.IsNullOrWhiteSpace(nomenTuum))
         {
-            smallShirt++;
-            console.log(smallShirt);
+            Console.WriteLine("That's... not a real name, or you're not writing it right.");
+            //User Prompt: Resubmit Name
+            Console.WriteLine("What's your name, again?");
+            nomenTuum = Console.ReadLine();
         }
-        else if (shirtArray[index] == "Medium")
+        //Prompt User: Book Number
+        Console.WriteLine("How many books?");
+        string bookBuy = Console.ReadLine();
+        int bookNum;
+        //Validate
+        while (!int.TryParse(bookBuy, out bookNum))
         {
-            mediumShirt++;
-            console.log(mediumShirt);
+            Console.WriteLine("That's... not a number, or you're not writing it right, " + nomenTuum +".");
+            //User Prompt: Books Bought
+            Console.WriteLine("How many books are you buying?");
+            bookBuy = Console.ReadLine();
         }
-        else if (shirtArray[index] == "Large")
+        //Create: Array
+        decimal[] bookArray = new decimal[bookNum];
+        //Create Loop
+        for (int i = 0; i < bookArray.Length; i++)
         {
-            largeShirt++;
-            console.log(largeShirt);
+            //Prompt User: Book Price
+            Console.WriteLine("How much for this book?");
+            string bookCost = Console.ReadLine();
+            //Validate
+            while (!decimal.TryParse(bookCost, out bookArray[i]))
+            {
+                Console.WriteLine("That's... not a number, or you're not writing it right, " + nomenTuum + ".");
+                Console.WriteLine("How many books are you buying?");
+                bookCost = Console.ReadLine();
+            }
         }
-        else if (shirtArray[index] == "X-Large")
+        decimal sum = 0;
+        //Create Loop
+        for (int i = 0; i < bookArray.Length; i++)
         {
-            xLargeShirt++;
-            console.log(xLargeShirt);
+            sum += bookArray[i];
         }
-        else if (shirtArray[index] == "XX-Large")
+        //Round: To 2
+        sum = (decimal)Math.Round(sum, 2);
+        //Create Conditional
+        if (bookNum == 0)
         {
-            xxLargeShirt++;
-            console.log(xxLargeShirt);
+            Console.WriteLine("Your total is $" + sum + " for " + bookArray.Length + " book.");
         }
-    }
-
-    console.log("Your order will consist of: ");
-
-    if (smallShirt== 1)
-	{
-        console.log(`${smallShirt} small shirt, `);
-    }
-    else if (smallShirt > 1)
-    {
-        console.log(`${smallShirt} small shirts, `);
-    }
-    if (mediumShirt == 1)
-    {
-        console.log(`${mediumShirt} medium shirt, `);
-    }
-    else if (mediumShirt > 1)
-    {
-        console.log(`${mediumShirt} medium shirts, `);
-    }
-    if (largeShirt == 1)
-    {
-        console.log(`${mediumShirt} large shirt, `);
-    }
-    else if (largeShirt > 1)
-    {
-        console.log(`${largeShirt} large shirts, `);
-    }
-    if (xLargeShirt == 1)
-    {
-        console.log(`${xLargeShirt} x-large shirt, `);
-    }
-    else if (xLargeShirt > 1)
-    {
-        console.log(`${xLargeShirt} x-large shirts, `);
-    }
-    if (xxLargeShirt == 1)
-    {
-        console.log(`${xxLargeShirt} xx-large shirt.`);
-    }
-    else if (xxLargeShirt > 1)
-    {
-        console.log(`${xxLargeShirt} xx-large shirts.`);
-    }
-
+        else
+        {
+            Console.WriteLine("Your total is $" + sum + " for " + bookArray.Length + " books.");
+        }
+        
+        //Create Array
+        let someThings = ["monitor", "computer", "desk", "keyboard", "mouse", "chair"];
+        //Create Array
+        let someColors = ["black", "gray", "brown", "green", "orange", "blue"];
+              
+        //Create Loop
+        for (let index = 0; index < someColors.length; index++)
+        {
+            Console.WriteLine(`The main color of the ${someThings[index]} is ${someColors[index]}.`);
+        }
 	</script>
 </body>

@@ -7,161 +7,154 @@
 </head>
 <body>
 	<div class="center">
+        Hello World
 	</div>
 	<script>
-               //Set Divider
-               console.log("========================= ========================= =========================");
-            let nomenTuum = prompt("Enter your name");
+        let userName = prompt("Enter your name");
         //Validate
-            while (!nomenTuum)
-            {
-                nomenTuum = prompt("Please Don't leave this blank. Enter your name:");
-            }
-        //User Prompt: Balance
-            let balance = prompt("What is your balance, " + nomenTuum + "?");
+        while (!userName)
+        {
+            userName = prompt("Please Don't leave this blank. Enter your name:");
+        }
+        let userBal = prompt(`What is your account balance, ${userName}?`);
         //Validate
-            while (!balance)
-            {
-                balance = prompt("Please don't leave this empty. What is your balance?");
-            }
-        //Round: To 2
-            balance = Math.round(balance, 2);
-        //User Prompt: Money Added
-            let deposit = prompt("How much is added each month?");
+        while (!userBal)
+        {
+            userBal = prompt("Please don't leave this empty. What is your account balance?");
+        }
+        userBal = Math.round(userBal, 2);
+        let userDeposit = prompt("How much is added each month?");
         //Validate
-            while (!deposit)
-            {
-                deposit = prompt("Please do not leave this empty. How much is added each month");
-            }
-        //Round: To 2
-            deposit = Math.round(deposit, 2);
+        while (!userDeposit)
+        {
+            userDeposit = prompt("Please do not leave this empty. How much is added each month");
+        }
+        userDeposit = Math.round(userDeposit, 2);
         //Create: Loop; For: 12 Months
-            for (let monthNum = 1; monthNum <= 12; monthNum++)
-            {
+        for (let monthNum = 1; monthNum <= 12; monthNum++)
+        {
             //Calculate: Total
-                let totalBalance = balance;
-            //Roundd: To 2
-                totalBalance = Math.round(totalBalance, 2);
+            let totaluserBal;
+            totaluserBal = totaluserBal + userBal;
+            totaluserBal = Math.round(totaluserBal, 2);
             //Conditional: If: Month is 1, 2, or 12
-                if (monthNum == 1 || monthNum == 2 || monthNum == 12)
-                {
+            if (monthNum == 1 || monthNum == 2 || monthNum == 12)
+            {
                 //Conditional: If month is one, display text.
-                    if (monthNum == 1)
-                    {
-                        console.log("Your total for this month is $" + totalBalance + ".");
-                    }
-                //Conditional: If: Month is two, Display Text.
-                    else if (monthNum == 2)
-                    {
-                        console.log("Your total for next month will be $" + totalBalance + ".");
-                    }
-                //Conditional: If: Month is twelve: Display Text
-                    else if (monthNum == 12)
-                    {
-                        console.log("Your total after a year will be $" + totalBalance + ".");
-                    }
+                if (monthNum == 1)
+                {
+                    alert("Your total for this month is $" + totaluserBal + ".");
                 }
+                //Conditional: If: Month is two, Display Text.
+                else if (monthNum == 2)
+                {
+                    alert("Your total for next month will be $" + totaluserBal + ".");
+                }
+                //Conditional: If: Month is twelve: Display Text
+                else if (monthNum == 12)
+                {
+                    alert("Your total after a year will be $" + totaluserBal + ".");
+                }
+            }
             //Conditional: Else: Display Text
+            else
+            {
+                alert("Your total for month " + monthNum + " will be $" + totaluserBal + ".");
+            }
+        }
+        let numCount = prompt(userName + ", what's the timer on the countdown, again?");
+        //Validate
+        while (!numCount)
+        {
+            numCount = prompt("Please don't leave this empty. ");
+        }
+        console.log("Blastoff in T-");
+        //Loop: While Number > 0, Count Down
+        while (numCount >= 0)
+        {
+            alert(numCount);
+            numCount--;
+        }
+        alert("BLASTOFF");
+        let donutsLeftlet = prompt("What's up " + userName + ", how many donuts are left?");
+        //Cast: To let
+        let donutsLeftRaw;
+        //Validate
+        while (!donutsLeftlet|| (donutsLeftRaw <= 0))
+        {
+            //Conditional: If: Not a Number
+            if (!donutsLeftlet)
+            {
+                //User Prompt: Remaining Donuts
+                console.log("That's... not a number, or you're not spelling it right." + userName + ", how many are left, again?");
+            }
+            //Conditional: Else If: Below Zero
+            else 
+            {
+                //User Prompt: Remaining Donuts
+                console.log("Come on, " + userName + ", you're lying. How many are really left?");
+            }
+            donutsLeftlet = prompt();
+        }
+        //User Prompt: WantedDonuts
+        console.log("Cool, how many do you want?");
+        let donutWants = prompt();
+        //Validate
+        while (!donutWants || donutWants > 3 || donutWants < 0)
+        {
+            //Conditional
+            if (!donutWants)
+            {
+                alert(`Please don't leave this empty. How many do you want ${userName}?`);
+            }
+            //Conditional: If Desired Donuts is > 3, Display Text
+            else if (donutWants> 3)
+            {
+                //User Prompt: Resubmit Response
+                donutWants = prompt("Try less than 4? How many donuts do you want?");
+            }
+            //Conditional: If Desired Donuts is < 0, Display Text
+            else if (donutWants < 0)
+            {
+                //User Prompt: Resubmit Response
+                donutWants = prompt("Are you bad at math? Or just thinking? You need a positive number of donuts.")
+            }
+        }
+        //Calculate: Remaining Donuts
+        let finalDonuts = donutsLeftRaw - donutWants;
+        //Loop: While Remainder > 0, Prompt User
+        while (finalDonuts > 0)
+        {
+            alert(`Awesome, there are ${finalDonuts} donuts left.`);
+            let donutWant = prompt("Who wants more donutes?");
+            //Validate
+            while (!donutWant)
+            {
+                donutWant = prompt("Please don't leave this empty. Who wants more donuts?");
+            }
+            //Calculate: New Remainder
+            finalDonuts = finalDonuts - donutWant;
+        }
+        //Conditional: If Remainder < 0, Display Text.
+        if (finalDonuts <= 0)
+        {
+            if (finalDonuts < 0)
+            {
+                let donutsOwed = finalDonuts * -2 / 2;
+                if (donutsOwed == 1)
+                {
+                    console.log("Okay so I'll owe you " + donutsOwed + " donut, then.");
+                }                    
                 else
                 {
-                    console.log("Your total for month " + monthNum + " will be $" + totalBalance + ".");
+                    console.log("Okay so I'll owe you " + donutsOwed + " donuts, then.");
                 }
             }
-            let elNumero = prompt(nomenTuum + ", what's the timer on the countdown, again?");
-        //Validate
-            while (!elNumero)
-            {
-                elNumero = prompt("Please don't leave this empty. ");
-            }
-            console.log("Blastoff in T-");
-        //Loop: While Number > 0, Count Down
-            while (elNumero >= 0)
-            {
-                console.log(elNumero);
-                elNumero--;
-            }
-            console.log("BLASTOFF");
-        //User Prompt: Remaining Donuts
-            console.log("What's up " + nomenTuum + ", how many donuts are left?");
-            let remainderlet = prompt();
-        //Cast: To let
-            let remainderRaw;
-        //Validate
-            while (!remainderlet|| (remainderRaw <= 0))
-            {
-            //Conditional: If: Not a Number
-                if (!remainderlet)
-                {
-                //User Prompt: Remaining Donuts
-                    console.log("That's... not a number, or you're not spelling it right." + nomenTuum + ", how many are left, again?");
-                }
-            //Conditional: Else If: Below Zero
-                else 
-                {
-                //User Prompt: Remaining Donuts
-                    console.log("Come on, " + nomenTuum + ", you're lying. How many are really left?");
-                }
-                remainderlet = prompt();
-            }
-        //User Prompt: WantedDonuts
-            console.log("Cool, how many do you want?");
-            let wants = prompt();
-        //Validate
-            while (!wants || wantsRaw > 3 || wantsRaw < 0)
-            {
-            //Conditional
-                if (!wants)
-                {
-                    console.log("That's... not a number, or you're not writing it right." + nomenTuum + ", how many do you want?");
-                }
-            //Conditional: If Desired Donuts is > 3, Display Text
-                else if (wants> 3)
-                {
-                //User Prompt: Resubmit Response
-                    wants = prompt("Try less than 4? How many donuts do you want?");
-                }
-            //Conditional: If Desired Donuts is < 0, Display Text
-                else if (wants < 0)
-                {
-                //User Prompt: Resubmit Response
-                    wants = prompt("Are you bad at math? Or just thinking? You need a positive number of donuts.")
-                }
-            }
-        //Calculate: Remaining Donuts
-            let finalDonuts = remainderRaw - wants;
-        //Loop: While Remainder > 0, Prompt User
-            while (finalDonuts > 0)
-            {
-                console.log("Awesome, there are " + finalDonuts + " donuts left.");
-            //User Prompt: Desired Donutss
-                console.log("Who wants more donuts?");
-                let donutWant = prompt("Who wants more donutes?");
-            //Validate
-                while (!donutWant)
-                {
-                    donutWant = prompt("Please don't leave this empty. Who wants more donuts?");
-                }
-            //Calculate: New Remainder
-                finalDonuts = finalDonuts - donutWant;
-            }
-        //Conditional: If Remainder < 0, Display Text.
-            if (finalDonuts <= 0)
-            {
-                if (finalDonuts < 0)
-                {
-                    let oweDonuts = finalDonuts * -2 / 2;
-                    if (oweDonuts == 1)
-                        console.log("Okay so I'll owe you " + oweDonuts + " donut, then.");
-                    else
-                    {
-                        console.log("Okay so I'll owe you " + oweDonuts + " donut, then.");
-                    }
-                }
             //Conditional: If Remainder == 0, End Program
-                else if (finalDonuts == 0)
-                {
-                    console.log("Alright, that's the last of the donuts. Enjoy.");
-                }
+            else if (finalDonuts == 0)
+            {
+                console.log("Alright, that's the last of the donuts. Enjoy.");
             }
+        }
 	</script>
 </body>
