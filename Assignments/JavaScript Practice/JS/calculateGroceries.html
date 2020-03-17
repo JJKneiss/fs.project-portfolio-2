@@ -12,17 +12,17 @@
         let nomenTuum = prompt("Hey there, what's your name?");
 
         let nanaPrice = prompt("Mind giving me the cost of a banana?");
-        nanaPrice = Math.Round(nanasPrice, 2);
+        nanaPrice = Math.round(nanasPrice, 2);
         let nanaAmount = prompt("How many bananas shall I get?");
         let totalNanas = nanaPrice * nanaAmount;
         
         let beefPrice = prompt("Now how about a beef brisket?");
-        beefPrice = Math.Round(beefPrice, 2);
+        beefPrice = Math.round(beefPrice, 2);
         let beefAmount = prompt("How many shall I get?");
         let totalBeef = beefPrice * beefAmount;
 
         let applePrice = prompt("Awesome, now how about an apple pie? I love warm apple pie. ^-^");
-        applePrice = Math.Round(applePrice, 2);       
+        applePrice = Math.round(applePrice, 2);       
         let appleAmount = prompt("How many shall I get?");
         let totalApples = applePrice * appleAmount;
         
@@ -31,19 +31,19 @@
 
         let nanaTax = totalNanas * salesTax;
         let finalNanas = nanaTax + totalNanas;
-        finalNanas = Math.Round(finalNanas, 2);
+        finalNanas = Math.round(finalNanas, 2);
 
         let beefTax = totalBeef * salesTax;
         let finalBeef = beefTax + totalBeef;
-        finalBeef = Math.Round(finalBeef, 2);
+        finalBeef = Math.round(finalBeef, 2);
 
         let appleTax = totalApples * salesTax;
         let finalApples = appleTax + totalApples;
-        finalApples = Math.Round(finalApples, 2);
+        finalApples = Math.round(finalApples, 2);
 
         let total = totalNanas + totalBeef + totalApples;
         let totalTax = appleTax+ beefTax + nanaTax;
-        totalTax = Math.Round(totalTax, 2);
+        totalTax = Math.round(totalTax, 2);
 
         let totalGrand = total + totalTax;
 
