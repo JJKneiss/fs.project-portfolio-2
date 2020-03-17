@@ -9,22 +9,44 @@
 	<div class="center">
 	</div>
 	<script>
-        let userName = prompt("Pease enter your name.");
+        
 
-        console.log("Hello " + userName + "! Let's play a game of MadLibs, how's that sound?");
-        console.log("\r\n(you don't have a choice here :3.)");
+        displayMessage("Hello! Let's play a game of MadLibs, how's that sound?");
+        displayMessage("\r\n(you don't have a choice here :3.)");
 
-        let nani0w0 = prompt("I'll need and adjective.");
-        let goodBoi = prompt("Please give me a type of animal!");
-        let elNombre = prompt("Now a name, just not your own.");
-        let kurgerBing = prompt("How about a food?");
+        let userName = askQuestion("Pease enter your name.");        
+        let adjective = askQuestion("I'll need and adjective.");
+        let animal = askQuestion("Please give me a type of animal!");
+        let person = askQuestion("Now a name, just not your own.");
+        let food = askQuestion("How about a food?");
 
-        alert("Drop me the following integers");
-        let costCo = prompt("Cost");
-        let yearOne = prompt("Year");
-        let randoNum = prompt("Number");
-        alert("open the console.")
-        console.log("Ohhh boy... well this is... a story...\r\n");
-        console.log("One day, in the year "+yearOne+" a "+nani0w0+" " + goodBoi + " ran around Wleter Park, coming across a biker named " + elNombre + ". The "+nani0w0+" " + goodBoi + " began to sit next to the tired "+elNombre+", but was soon chased off, as "+elNombre+" was allergic to "+goodBoi+"s. Throwing his $"+kurgerBing+" bag of "+kurgerBing+" at the "+goodBoi+" he soon realized he lost "+randoNum+ " of his "+kurgerBing+". Saddened by this, he quietly sat contemplating the state of things.");
+        displayMessage("Please provide the following integers\r\n (press okay to continue.)");
+        
+        let cost = prompt("Cost");
+        let year = prompt("Year");
+        let num = prompt("Number");
+
+        displayMessage("Ohhh boy... well this is... a story...");
+        displayMessage(`One day, in the year ${year} a ${adjective} ${animal} ran around Wleter Park, coming across a biker named ${person}.` +
+        ` The ${adjective} ${animal} began to sit next to the tired ${person}, but was soon chased off, as ${person} was allergic to ${animal}s.` +
+        ` Throwing his ${cost} bag of ${food} at the ${animal} he soon realized he lost ${num} pieces of his ${food}.` +
+        ` Saddened by this, he quietly sat contemplating quantum-mechanical theory and why ${food} is so tasty.`);
+
+        function askQuestion(message)
+        {
+              let answer = prompt(message);
+              console.log(message);
+              while(!answer)
+              {
+                answer = prompt(message);
+              }
+              console.log(answer);
+              return answer;
+        }
+        function displayMessage(message)
+        {
+                alert(message);
+                console.log(message);
+        }
 </script>
 </body>

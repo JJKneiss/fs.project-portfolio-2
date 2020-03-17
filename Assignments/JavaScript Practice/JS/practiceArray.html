@@ -9,18 +9,18 @@
 	<div class="center">
 	</div>
 	<script>
-        let userName = prompt("What's your name?");
+        let userName = askQuestion("What's your name?");
         //Validate
         while (!userName)
         {
-            userName = prompt("What's your name, again?");
+            userName = askQuestion("What's your name, again?");
         }
         //Prompt User: Book Number
-        let bookBuy = prompt("How many books are you buying?");
+        let bookBuy = askQuestion("How many books are you buying?");
         //Validate
         while (!bookBuy)
         {
-            bookBuy = prompt("How many books, again?");
+            bookBuy = askQuestion("How many books, again?");
         }
         //Create: Array
         let bookArray = [];
@@ -29,12 +29,12 @@
         for (let index = 0; index < bookBuy; index++)
         {
             //Prompt User: Book Price
-            let bookCost = prompt("How much for this book?");
+            let bookCost = askQuestion("How much for this book?");
             //Validate
             
             while (!bookCost || isNaN(bookCost.trim('$')))
             {
-                bookCost = prompt("How much for this book?");
+                bookCost = askQuestion("How much for this book?");
             }
             //let cost = parseFloat(bookCost);
             sum += parseFloat(bookCost);
@@ -55,11 +55,11 @@
         //sum = Math.round(sum, 2);
         if (bookBuy >= 2)
         {
-            alert(`Your total is ${sum} for ${bookArray.length} books.`);
+            displayMessage(`Your total is ${sum} for ${bookArray.length} books.`);
         }
         else
         {
-            alert(`Your total is $${sum} for ${bookArray.length} book.`);
+            displayMessage(`Your total is $${sum} for ${bookArray.length} book.`);
         }
 
         //Create Array
@@ -71,7 +71,24 @@
         //Create Loop
         for (let index = 0; index < someColors.length; index++)
         {
-            alert(`The main color of the ${someThings[index]} is ${someColors[index]}.`);
+            displayMessage(`The main color of the ${someThings[index]} is ${someColors[index]}.`);
+        }
+
+        function askQuestion(message)
+        {
+            let answer = prompt(message);
+            console.log(message);
+            while(!answer)
+            {
+                answer = prompt(message);
+            }
+            console.log(answer);
+            return answer;
+        }
+        function displayMessage(message)
+        {
+            alert(message);
+            console.log(message);
         }
 	</script>
 </body>
