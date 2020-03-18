@@ -1,0 +1,4 @@
+function practiceLoops()
+{
+    displayMessage("World");
+}

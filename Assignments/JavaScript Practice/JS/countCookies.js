@@ -1,0 +1,4 @@
+function countCookies()
+{
+    displayMessage("Hello;");
+}

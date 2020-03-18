@@ -10,30 +10,18 @@ function calculateGroceries()
         let salesTax = askQuestion("What's the sale's tax in this area? (as an integer,\r\n please)");
         salesTax /= 100;
         
-        let finalNanas = promptTax(totalNanas);
-        let finalBeef = promptTax(totalBeef);
-        let finalApples = promptTax(totalApples);
+        let taxNanas = promptTax(totalNanas);
+        let taxBeef = promptTax(totalBeef);
+        let taxApples = promptTax(totalApples);
         
         let total = totalNanas + totalBeef + totalApples;
+        let finalFood = foodTax + foodTotal;
         let totalTax = appleTax+ beefTax + nanaTax;
         
         let totalGrand = total + totalTax;
         totalGrand = Math.round(totalGrand.toFixed(2));
-        let finalMessage = 
-        alert(`Excluding Tax; Bananas: $${totalNanas}, Beef Brisket: $${totalBeef}, Apple Pie: $${totalApples}. That all totals out to $${total}.`);
-        alert(`Including Tax; Bananas: ${finalNanas}, Beef Brisket: ${finalBeef}, Apple Pie: ${finalApples}. That sums $${totalTax} in taxes. Coming to a grand total of $${totalGrand}.`);
-}
-
-function askQuestion(message)
-{
-        let answer = prompt(message);
-        console.log(message);
-        while(!answer)
-        {
-        answer = prompt(message);
-        }
-        console.log(answer);
-        return answer;
+        displayMessage(`Excluding Tax; Bananas: $${totalNanas}, Beef Brisket: $${totalBeef}, Apple Pie: $${totalApples}. That all totals out to $${total}.`);
+        displayMessage(`Including Tax; Bananas: ${finalNanas}, Beef Brisket: ${finalBeef}, Apple Pie: ${finalApples}. That sums $${totalTax} in taxes. Coming to a grand total of $${totalGrand}.`);
 }
 function promptCost(food)
 {
@@ -45,6 +33,9 @@ function promptCost(food)
 function promptTax(foodTotal)
 {
         let foodTax = foodTotal * salesTax;
-        let finalFood = foodTax + foodTotal;
-        return finalFood;
+        return foodTax;
+}
+function promptTotal(foodTax)
+{
+        
 }

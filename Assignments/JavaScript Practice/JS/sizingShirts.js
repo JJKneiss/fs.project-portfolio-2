@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en"></html>
-<head>
-	<title>
-		Hello World
-	</title>
-</head>
-<body>
-	<div class="center">
-	</div>
-	<script>
-		let userAnswer = prompt("Hello! Welcome to Shirts R Us! What is your shirt size?" + 
+function sizingshirts()
+{
+    let userAnswer = prompt("Hello! Welcome to Shirts R Us! What is your shirt size?" + 
         "\r\nSmall, Medium, Large, X-Large, XX-Large");
         let shirtArray = ["XX-Large", "Medium", "Large", "Small", "XX-Large", "Small", "Large", "XX-Large", "Large", "X-Large", "Medium", "Medium"];
         let smallShirt = 0;
@@ -82,5 +73,4 @@
         {
             console.log(`${xxLargeShirt} xx-large shirts.`);
         }
-	</script>
-</body>
+}
