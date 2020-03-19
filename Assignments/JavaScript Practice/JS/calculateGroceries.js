@@ -35,7 +35,3 @@ function promptTax(foodTotal)
         let foodTax = foodTotal * salesTax;
         return foodTax;
 }
-function promptTotal(foodTax)
-{
-        
-}
