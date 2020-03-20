@@ -31,7 +31,7 @@ function askForNumber(message)
     console.log(message);
     while (!answer || isNaN(answer))
     {
-        answer = prompt(message);
+        answer = Number(prompt(message));
     }
 
     console.log("%c" + answer, "color : green");
@@ -41,7 +41,7 @@ function boolQuestion(message)
 {
     let answer = prompt(message);
     console.log(message);
-    while(answer.LowerCase() != "yes" && answer.toLowerCase() != "no")
+    while(answer.toLowerCase() != "yes" && answer.toLowerCase() != "no")
     {
         answer = prompt(message);
     }
