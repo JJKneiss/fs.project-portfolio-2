@@ -15,23 +15,16 @@ function calculateGroceries()
         let taxApples = promptTax(totalApples);
         
         let total = totalNanas + totalBeef + totalApples;
-        let finalFood = foodTax + foodTotal;
-        let totalTax = appleTax+ beefTax + nanaTax;
+        let tax = total * salesTax;
+        let final = tax + total;
         
-        let totalGrand = total + totalTax;
-        totalGrand = Math.round(totalGrand.toFixed(2));
-        displayMessage(`Excluding Tax; Bananas: $${totalNanas}, Beef Brisket: $${totalBeef}, Apple Pie: $${totalApples}. That all totals out to $${total}.`);
-        displayMessage(`Including Tax; Bananas: ${finalNanas}, Beef Brisket: ${finalBeef}, Apple Pie: ${finalApples}. That sums $${totalTax} in taxes. Coming to a grand total of $${totalGrand}.`);
+        displayMessage(`[Excluding Tax]: Bananas: $${totalNanas}, Beef Brisket: $${totalBeef}, Apple Pie: $${totalApples}. Total: $${total}.`);
+        displayMessage(`[Including Tax]: Tax: ${tax}, Final Total: $${final}.`);
 }
 function promptCost(food)
 {
-        let foodPrice = askQuestion(`What is the price of a ${food}?`);
-        let foodAmount = askQuestion(`How many ${food}s shall I get?`);
-        let foodTotal = foodPrice * foodAmount;
-        return foodTotal;
-}
-function promptTax(foodTotal)
-{
-        let foodTax = foodTotal * salesTax;
-        return foodTax;
+let foodPrice = askQuestion(`What is the price of a ${food}?`);
+let foodAmount = askQuestion(`How many ${food}s shall I get?`);
+let foodTotal = foodPrice * foodAmount;
+return foodTotal;
 }
