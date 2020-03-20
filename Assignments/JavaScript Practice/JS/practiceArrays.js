@@ -1,14 +1,13 @@
 function practiceArrays()
 {
     let userName = askQuestion("What's your name?");
-    let bookBuy = askQuestion("How many books are you buying?");
+    let bookBuy = askForNumber("How many books are you buying?");
     while(bookBuy <= 0)
     {
         bookBuy = askForNumber("How many books are you buying?");
     }
     //Create: Array
     let bookArray = [];
-    console.log(bookArray.length);
     let sum = 0;
     let bookCost;
     //Create Loop
@@ -22,7 +21,6 @@ function practiceArrays()
     {
         sum += e;
     });
-    console.log(sum)
     if (bookBuy > 1)
     {
         displayMessage(`Your total is ${sum} for ${bookArray.length} books.`);
@@ -31,8 +29,7 @@ function practiceArrays()
     {
         displayMessage(`Your total is $${sum} for ${bookArray.length} book.`);
     }
-    displayMessage("Press Enter to Continue...");
-    console.clear();
+    screenClear();
     //Create Array
     let someThings = ["monitor", "computer", "desk", "keyboard", "mouse", "chair"];
 
@@ -41,6 +38,6 @@ function practiceArrays()
     //Create Loop
     for (let index = 0; index < someColors.length; index++)
     {
-        displayMessage(`The main color of the ${someThings[index]} is ${someColors[index]}.`);
+        displayMessage(`%cThe main color of the ${someThings[index]} is ${someColors[index]}.`);
     }
 }

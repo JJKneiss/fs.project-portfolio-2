@@ -7,7 +7,18 @@ function askQuestion(message)
         answer = prompt(message);
     }
     console.log(answer);
-    return answer;
+    return String(answer);
+}
+function stringsOnly(message)
+{
+    let answer = prompt(message);
+    console.log(message);
+    while(!answer || !isNaN(answer))
+    {
+        answer = prompt(message);
+    }
+    console.log(answer);
+    return String(answer);
 }
 function displayMessage(message)
 {
@@ -18,10 +29,16 @@ function askForNumber(message)
 {
     let answer = prompt(message);
     console.log(message);
-    while (!answer)
+    while (!answer || isNaN(answer))
     {
         answer = prompt(message);
     }
-    console.log(answer);
+
+    console.log("%c" + answer, "color : red");
     return Number(answer);
+}
+function screenClear()
+{
+    displayMessage("Press Enter to Continue...");
+    console.clear();
 }
