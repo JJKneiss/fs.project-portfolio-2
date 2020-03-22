@@ -8,6 +8,17 @@
       <File FileName="Kneiss_Jamie_Final/characters.txt" />
       <File FileName="Kneiss_Jamie_Final/Races.cs" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Kneiss_Jamie_Final" expanded="True">
+            <Node name="Kneiss_Jamie_Final" expanded="True">
+              <Node name="Assignment.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
