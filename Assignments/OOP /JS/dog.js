@@ -19,8 +19,4 @@ class Dog extends Animal
         // }
         return total / this.grades.length;
     }
-    hideBone()
-    [
-        
-    ]
 }

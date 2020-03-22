@@ -8,6 +8,6 @@ class Animal
     }
     makeNoise(noise)
     {
-        console.log(noise + ", I'm a " + this.species)
+        displayMessage(noise + ", I'm a " + this.species)
     }
 }
