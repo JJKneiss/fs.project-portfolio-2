@@ -1,9 +1,10 @@
-class Dog extends Animal
-{
-    constructor(breed)
+class Student extends Person
+{ 
+    constructor(name)
     {
-        console.log("beagle Created");
-        this.breed = breed;
+        super(name);
+        this.studentID = 123;
+        this.grades = [];
     }
     getAvgGrade()
     {
@@ -17,6 +18,6 @@ class Dog extends Animal
         // {
         //     total += this.grades[index];
         // }
-        return total / this.grades.length;
+        return Number (total / this.grades.length);
     }
 }
