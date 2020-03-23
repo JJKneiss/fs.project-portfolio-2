@@ -67,23 +67,24 @@ console.log(myJSON.people[0].job);
 
 //Load JSON data in the HTML using DOM
 
-
-
 /**********   PRACTICE EXERCISES   *******************/
 //1. Create a JSON object in the blank json_weather.js file using the provided weatherData.txt file.
-// Use the following line if code to test your new file: console.log(data.results.forecast[2].day);
+// Use the following line if code to test your new file: 
+console.log(data.results.forecast[2].day);
 
 
 
 // 2. Console.log the forecast for the next 3 days in sentence (String) format
 // example: Today is Saturday. The high is 82. The low is 65. It will be partly cloudy.
-
-
+let day = data.results.forecast[2].day;
+let high = data.results.forecast[2].high, low = data.results.forecast[2].low;
+let condition = data.results.forecast[2].text;
+console.log(`Today is ${day}day! The high is ${high} and low is ${low}. It will be ${condition} out today.`)
 
 // 3. Console.log each of the employees showing their full names (from the object "employees"
 // and jobs (from the object "people").
 
-
-
-
-
+for(let index = 0; index < myJSON.people.length; index++)
+{
+   console.log(`%c${obj.employees[index].firstName} ${obj.employees[index].lastName}: %c${myJSON.people[index].job}`, "color: cyan", "color:red");
+}
