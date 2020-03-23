@@ -35,4 +35,4 @@
 }
 .dropdown-content a:hover {background-color: #ddd;}
 .dropdown:hover .dropdown-content {display: table;}
-.dropdown:hover .dropbtn {background-color: black}
+.dropdown:hover .dropbtn {background-color: burlywood; color: #2D5D5F;}

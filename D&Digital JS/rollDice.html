@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	<link rel= "stylesheet" type="text/css" href="assets/css/dropdown.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/float.css">
 <title>Rogue's Galler Dice Roll</title>
 </head>
 <body>
@@ -49,23 +50,32 @@
 			margin: 5px;
 		}
 	</style>
+	
+	<div id = "wrapper" style="align-content:center;">
+		<div id = "first"> Dice
+				<select id = "dice" name = "Dice">
+					<option value="d4">D4</option>
+					<option value="d6">D6</option>
+					<option value="d8">D8</option>
+					<option value="d10">D10</option>
+					<option value="percentile">D10 - Percentile</option>
+					<option value="d12">D12</option>
+					<option value="d20">D20</option>
+				</select>
+		</div>
+		<div id = "second">Number of Dice
+				<select id = "number" name = "number">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+		</div>		
+	</div>
 	<div id = "die1" class="dice">0</div>
 	<div id = "die2" class="dice">0</div>
 	<button = onclick="diceRoll()">Roll Dice</button>
 	<h2 id="status" style = "clear:left;"></h2>
-	<script>
-		function diceRoll()
-		{
-			var die1 = document.getElementById("die1");
-			var die2 = document.getElementById("die2");
-			var status = document.getElementById("status");
-			var d1 = Math.floor((Math.random() * 6) + 1);
-			var d2 = Math.floor((Math.random() * 6) + 1);
-			var diceTotal = d1 + d2;
-			die1.innerHTML = d1;
-			die2.innerHTML = d2;
-			status.innerHTML = `You rolled ${diceTotal}.`;
-		}
-	</script>
+	<script src = "js/dice.js"></script>
 </body>
 </html>

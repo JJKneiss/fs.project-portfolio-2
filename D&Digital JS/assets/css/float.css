@@ -1,0 +1,13 @@
+#wrapper { 
+  align-content: center;
+  width: 700px;
+  overflow: hidden; /* add this to contain floated children */
+}
+#first {
+  width: 250px;
+  float:left; /* add this */
+}
+#second {
+  width: 250px;
+  float: left; /* add this */
+}

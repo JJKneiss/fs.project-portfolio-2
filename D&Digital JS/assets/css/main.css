@@ -14,6 +14,16 @@ div
    margin: 0px; 
    padding: 0px;
 }
+button
+{
+  background-color:#2D5D5F;
+  color: white;
+  border-radius: 15%;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10%;
+}
 h1
 {
   color: black;
@@ -28,12 +38,14 @@ h1-color
 }
 h2
 {
+  text-align: center;
   color: #707070;
   font-size: 24px;
   font-family: 'Oxanium', cursive;
 }
 h2-color
 {
+  text-align: center;
   color: #905442;
   font-size: 24px;
   font-family: 'Oxanium', cursive;

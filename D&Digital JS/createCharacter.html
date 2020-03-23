@@ -3,9 +3,10 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	<link rel= "stylesheet" type="text/css" href="assets/css/dropdown.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/float.css">
 <title>Rogue's Gallery Create Character</title>
 </head>
-<body>
+<body style="background-color: darkgrey;">
 	<header style="text-align: center; padding-top: 1px; margin-top: 0px;">
 		<h1 style="margin-bottom: 0px; font-size: 68px; color: #2D5D5F;">Rogue's Gallery</h1>
 		<p style="margin-top: 0px; font-size: 24px; color: burlywood">Adventure is a Tavern Away</p>
@@ -34,28 +35,29 @@
 		</ul>   
 	</div>    
 
-<form>
-    <p>Let's get started</p>
-    <h2-color>Name: </h2-color>
-    <input id="name" type="text">
-    <h2>Race
-        <select id = "races" name = "Race">
-            <option value="elf">Elf</option>
-            <option value="human">Human</option>
-            <option value="orc">Orc</option>
-            <option value="dwarf">Dwarf</option>
-        </select>
-    </h2>
-    <h2>Class
-        <select id= "classes" name= "Class">
-            <option value="fighter">Fighter</option>
-            <option value="bard">Bard</option>
-            <option value="rogue">Rogue</option>
-            <option value="wizard">Wizard</option>
-        </select>   
-    </h2>
+<form style="margin-left: 30%; margin-right: 30%;">
+		<p>Let's get started</p>
+		<h2-color>Name: <input id="name" type="text"></h2-color>
+		<div id = "wrapper">		
+			<h2 id = "first">Race
+				<select id = "races" name = "Race">
+					<option value="elf">Elf</option>
+					<option value="human">Human</option>
+					<option value="orc">Orc</option>
+					<option value="dwarf">Dwarf</option>
+				</select>
+			</h2>
+			<h2 id = "second">Class
+				<select id= "classes" name= "Class">
+					<option value="fighter">Fighter</option>
+					<option value="bard">Bard</option>
+					<option value="rogue">Rogue</option>
+					<option value="wizard">Wizard</option>
+				</select>   
+			</h2>
+		</div>
+		<button id="submitForm" type="submit">Submit</button>	
 </form>
-<button id="submitForm" type="submit">Submit</button>
 
 <p id = "your character"></p>
 <script type = "text/javascript" src="js/create.js"></script>
