@@ -13,7 +13,7 @@ function createCharacter(event){
     //COOKIE
     localStorage.setItem("characters", JSON.stringify(characters));
     console.table(characters);
-    message = `${n}, the ${r} ${c} has arrived. Welcome traveler!`;
+    message = `${name}, the ${race} ${classes} has arrived. Welcome traveler!`;
     document.getElementById("your character").innerHTML = message;
     console.log(message);
     console.log(localStorage.characters);
