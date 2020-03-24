@@ -1,0 +1,3 @@
+﻿Abaddon,Tiefling,Rogue
+Nora,Elf,Ranger
+Wru Kag,Orc,Monk

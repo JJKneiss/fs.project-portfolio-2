@@ -4,13 +4,12 @@ const characters = [];
 function createCharacter(event){
     event.preventDefault();
     
-    let n, r, c, message;
+    let name, race, classes, message;
 
-
-    n = document.getElementById("name").value;
-    r = document.getElementById("races").value;
-    c = document.getElementById("classes").value;
-    characters.push({ name: n, race: r, classes: c });
+    name = document.getElementById("name").value;
+    race = document.getElementById("races").value;
+    classes = document.getElementById("classes").value;
+    characters.push({ name: name, race: race, classes: classes });
     //COOKIE
     localStorage.setItem("characters", JSON.stringify(characters));
     console.table(characters);
