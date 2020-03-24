@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Kneiss_Jamie_Final
 {
-    public class Character
+    public class Character : IClass, IRace
     {
         public Character()
         {

@@ -49,9 +49,11 @@ namespace Kneiss_Jamie_Final
         private void CreateCharacter()
         {
             string name = Validation.ValidateString("Please enter your character's name", 1);
+
         }
         private void DisplayCharacter()
         {
+
         }
         private void RemoveCharacter()
         {

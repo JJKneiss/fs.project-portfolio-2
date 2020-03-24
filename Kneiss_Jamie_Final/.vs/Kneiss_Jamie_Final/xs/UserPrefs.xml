@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{54A5B453-4E0A-4374-8E5A-94B349B5B90C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Kneiss_Jamie_Final/Assignment.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kneiss_Jamie_Final/Characters.cs">
     <Files>
-      <File FileName="Kneiss_Jamie_Final/Assignment.cs" Line="79" Column="55" />
-      <File FileName="Kneiss_Jamie_Final/Dice.cs" />
-      <File FileName="Kneiss_Jamie_Final/Characters.cs" />
-      <File FileName="Kneiss_Jamie_Final/Classes.cs" />
-      <File FileName="Kneiss_Jamie_Final/characters.txt" />
+      <File FileName="Kneiss_Jamie_Final/Assignment.cs" Line="51" Column="94" />
+      <File FileName="Kneiss_Jamie_Final/Dice.cs" Line="7" Column="10" />
+      <File FileName="Kneiss_Jamie_Final/Characters.cs" Line="31" Column="1" />
+      <File FileName="Kneiss_Jamie_Final/Classes.cs" Line="1" Column="1" />
+      <File FileName="Kneiss_Jamie_Final/characters.txt" Line="1" Column="1" />
       <File FileName="Kneiss_Jamie_Final/Races.cs" />
     </Files>
     <Pads>
@@ -13,7 +13,7 @@
         <State name="__root__">
           <Node name="Kneiss_Jamie_Final" expanded="True">
             <Node name="Kneiss_Jamie_Final" expanded="True">
-              <Node name="Assignment.cs" selected="True" />
+              <Node name="Characters.cs" selected="True" />
             </Node>
           </Node>
         </State>

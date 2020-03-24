@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/float.css">
 <title>Rogue's Gallery Create Character</title>
 </head>
-<body style="background-color: darkgrey;">
+<body style="background-color: #242424;">
 	<header style="text-align: center; padding-top: 1px; margin-top: 0px;">
 		<h1 style="margin-bottom: 0px; font-size: 68px; color: #2D5D5F;">Rogue's Gallery</h1>
 		<p style="margin-top: 0px; font-size: 24px; color: burlywood">Adventure is a Tavern Away</p>
@@ -38,8 +38,8 @@
 <form style="margin-left: 30%; margin-right: 30%;">
 		<p>Let's get started</p>
 		<h2-color>Name: <input id="name" type="text"></h2-color>
-		<div id = "wrapper">		
-			<h2 id = "first">Race
+		<div id = "wrapper" >		
+			<h2 id = "first" class="dropdown">Race
 				<select id = "races" name = "Race">
 					<option value="elf">Elf</option>
 					<option value="human">Human</option>
@@ -58,6 +58,15 @@
 		</div>
 		<button id="submitForm" type="submit">Submit</button>	
 </form>
+<ul>
+	<li>
+		<p>Let's get started</p>
+	</li>
+	<li class="dropdown">
+	</li>
+	<li class="dropdown">
+	</li>
+</ul>
 
 <p id = "your character"></p>
 <script type = "text/javascript" src="js/create.js"></script>
