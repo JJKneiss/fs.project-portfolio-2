@@ -62,11 +62,11 @@ namespace Kneiss_Jamie_Final
         public string Campaign { get; set; }
         public int PartySize { get; set; }
         public List<Adventurer> Party { get; set; }
-        public DM(string userName, string campaignName) : base (userName)
+        public DM(string userName, string campaignName, int size) : base (userName)
         {
             UserType = "DM";
             Campaign = campaignName;
-            PartySize = 
+            PartySize = size;
         }
         public override string Quit()
         {
