@@ -21,13 +21,22 @@ namespace Library
             Utility.ChangeCyan(Title+"\r\n");
             Console.WriteLine(Divider);
         }
-        public void Display()
+        public void NewTitle(string newTitle)
         {
+            Title = newTitle;
             Formatting();
+        }
+        public void MinDisplay()
+        {
             for (int i = 0; i < _items.Count; i++)
             {
                 Console.WriteLine($"[{i + 1}]: {_items[i]}");
             }
+        }
+        public void MaxDisplay()
+        {
+            Formatting();
+            MinDisplay();
         }
     } 
  public class Validation

@@ -11,13 +11,17 @@ namespace Kneiss_Jamie_Final
         {
             UserName = userName;
         }
+        public virtual string Quit()
+        {
+            return $"This is {UserName} and I'm finished.";
+        }
     }
     public class Adventurer : Player, IDice
     {
         public string CharName { get; set; }
         public string Race { get; set; }
         public string Class { get; set; }
-        private Dictionary<string, int> _charStats;
+        public Dictionary<string, int> CharStats { get; set; }
 
         public Adventurer(string userName, string charName, string charRace, string charClass) : base (userName)
         {
@@ -26,7 +30,7 @@ namespace Kneiss_Jamie_Final
             Race = charRace;
             Class = charClass;
         }
-        public int RollDice()
+        public int RollStats()
         {
             Random rnd = new Random();
             int roll = 0;
@@ -48,19 +52,29 @@ namespace Kneiss_Jamie_Final
             }
             return roll;
         }
+        public override string Quit()
+        {
+            return $"Hope to see you adventuring again someday, {UserName}!";
+        }
     }
     public class DM : Player
     {
         public string Campaign { get; set; }
+        public int PartySize { get; set; }
+        public List<Adventurer> Party { get; set; }
         public DM(string userName, string campaignName) : base (userName)
         {
             UserType = "DM";
             Campaign = campaignName;
+            PartySize = 
+        }
+        public override string Quit()
+        {
+            return $"Alright! Sorry to see you leave, but we look forward to your next epic story, {UserName}";
         }
     }
     public interface IDice
     {
         int StatRoll();
     }
-    
 }
