@@ -183,10 +183,11 @@ namespace Library
         public static void Goodbye(string msg)
         {
             Console.Clear();
+            Console.WriteLine(msg);
             //Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("{0," + ((Console.WindowWidth / 2) + msg.Length / 2) + "}");
+            //Console.WriteLine("{0," + ((Console.WindowWidth / 2) + msg.Length / 2) + "}");
             //Console.ForegroundColor = ConsoleColor.Gray;
-            Feedback($"{{0, {(Console.WindowWidth / 2) + msg.Length / 2}}}", 2);
+            //Feedback($"{{0, {(Console.WindowWidth / 2) + msg.Length / 2}}}", 2);
         }
         public static void Feedback(string s, int i)
         {

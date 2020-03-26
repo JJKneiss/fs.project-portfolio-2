@@ -37,7 +37,6 @@ namespace Kneiss_Jamie_Final
             for (int i = 0; i < 4; i++)
             {
                 roll += rnd.Next(1, 6);
-
             }
             return roll;
         }
@@ -48,7 +47,6 @@ namespace Kneiss_Jamie_Final
             for (int i = 0; i < 4; i++)
             {
                 roll += rnd.Next(1, 6);
-
             }
             return roll;
         }
