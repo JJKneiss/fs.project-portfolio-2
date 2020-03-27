@@ -2,23 +2,11 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Kneiss_Jamie_Final/Assignment.cs">
     <Files>
       <File FileName="Kneiss_Jamie_Final/Assignment.cs" Line="145" Column="32" />
-      <File FileName="Kneiss_Jamie_Final/Characters.cs" Line="69" Column="30" />
-      <File FileName="Kneiss_Jamie_Final/Library.cs" Line="1" Column="1" />
-      <File FileName="Kneiss_Jamie_Final/output/players.txt" Line="1" Column="1" />
-      <File FileName="Kneiss_Jamie_Final/output/campaign.json" Line="1" Column="1" />
+      <File FileName="Kneiss_Jamie_Final/Characters.cs" />
+      <File FileName="Kneiss_Jamie_Final/Library.cs" />
+      <File FileName="Kneiss_Jamie_Final/output/players.txt" />
+      <File FileName="Kneiss_Jamie_Final/output/campaign.json" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Kneiss_Jamie_Final" expanded="True">
-            <Node name="Kneiss_Jamie_Final" expanded="True">
-              <Node name="output" expanded="True" />
-              <Node name="Assignment.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

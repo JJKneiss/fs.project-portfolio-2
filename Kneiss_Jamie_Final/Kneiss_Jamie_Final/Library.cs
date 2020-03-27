@@ -38,8 +38,8 @@ namespace Library
             Formatting();
             MinDisplay();
         }
-    } 
- public class Validation
+    }
+    public class Validation
     {
         public static void Resubmit(string s)
         {
@@ -48,7 +48,7 @@ namespace Library
         }
         public static int ValidateInt(string s, int x)
         {
-            Utility.ChangeCyan("\n"+ s + "\n");
+            Utility.ChangeCyan("\n" + s + "\n");
             string response = Console.ReadLine();
             int i;
             while (!int.TryParse(response, out i))
@@ -65,7 +65,7 @@ namespace Library
                 {
                     Resubmit("Please enter a valid integer");
                     response = Console.ReadLine();
-                }                
+                }
             }
             return i;
         }
@@ -78,17 +78,17 @@ namespace Library
                 if (i != 1)
                 {
                     Resubmit("Do not leave this empty");
-                    Utility.ClearAtLine(0,1);
+                    Utility.ClearAtLine(0, 1);
                     Utility.ChangeCyan(s);
                     response = Console.ReadLine();
-                    Utility.ClearAtLine(0,1);
+                    Utility.ClearAtLine(0, 1);
                 }
                 else
                 {
                     Resubmit("Do not leave this empty");
-                    Utility.ClearAtLine(0,1);
+                    Utility.ClearAtLine(0, 1);
                     response = Console.ReadLine();
-                    Utility.ClearAtLine(0,1);
+                    Utility.ClearAtLine(0, 1);
                 }
             }
             return response;
@@ -103,17 +103,17 @@ namespace Library
                 if (i != 1)
                 {
                     Resubmit("Please enter a valid decimal");
-                    Utility.ClearAtLine(0,1);
+                    Utility.ClearAtLine(0, 1);
                     Utility.ChangeCyan(s);
                     response = Console.ReadLine();
-                    Utility.ClearAtLine(0,1);
+                    Utility.ClearAtLine(0, 1);
                 }
                 else
                 {
                     Resubmit("Do not leave this empty");
-                    Utility.ClearAtLine(0,1);
+                    Utility.ClearAtLine(0, 1);
                     response = Console.ReadLine();
-                    Utility.ClearAtLine(0,1);
+                    Utility.ClearAtLine(0, 1);
                 }
             }
             return d;
@@ -128,10 +128,10 @@ namespace Library
                 if (x > 1)
                 {
                     Resubmit("Please enter a valid decimal");
-                    Utility.ClearAtLine(0,1);
+                    Utility.ClearAtLine(0, 1);
                     Utility.ChangeCyan(s);
                     response = Console.ReadLine();
-                    Utility.ClearAtLine(0,1);
+                    Utility.ClearAtLine(0, 1);
                 }
                 else
                 {
@@ -151,10 +151,10 @@ namespace Library
                 if (x > 1)
                 {
                     Resubmit("Please enter a valid decimal");
-                    Utility.ClearAtLine(0,1);
+                    Utility.ClearAtLine(0, 1);
                     Utility.ChangeCyan(s);
                     response = Console.ReadLine();
-                    Utility.ClearAtLine(0,1);
+                    Utility.ClearAtLine(0, 1);
                 }
                 else
                 {
@@ -164,7 +164,7 @@ namespace Library
             }
             return f;
         }
-    }    
+    }
     public class Utility
     {
         public static void Continue(string s)

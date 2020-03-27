@@ -7,15 +7,14 @@ namespace Kneiss_Jamie_Final
 {
     public class Assignment
     {
+        #region 
         private Menu _menu;
-
-        private  DM _dm;
+        private DM _dm;
+        private IDice _dice;
         private Adventurer _adventurer;
         private List<Player> _players;
-
-        //private List<Adventurer> _party;
-
-        private bool _removeChar;
+        private List<Adventurer> _party;
+        #endregion
 
         #region File Strings
         private string _file = "players.txt";
@@ -23,7 +22,7 @@ namespace Kneiss_Jamie_Final
         private string _directory = @"../../../output/";
         #endregion
 
-        #region Players
+#region Fields
         private string _username;
         private string _type;
         private string _campaign;
@@ -31,7 +30,8 @@ namespace Kneiss_Jamie_Final
         private string _charName;
         private string _charRace;
         private  string _charClass;
-        #endregion
+        private bool _removeChar;
+#endregion
 
         public Assignment()
         {
@@ -43,7 +43,7 @@ namespace Kneiss_Jamie_Final
             LoadData();
             MainMenu();
         }
-        #region Navigation
+#region Navigation
         private void MainMenu()
         {
             Console.Clear();
@@ -153,13 +153,20 @@ namespace Kneiss_Jamie_Final
             }
             return cClass;
         }
-        #endregion
-        #region Assignment Methods
+#endregion
+#region Assignment Methods
         private void CreatePlayer()
         {
             Console.Clear();
             _menu.NewTitle("Create Player");
-            _username = Validation.ValidateString("Please enter your username: ", 1);
+            _username = Validation.ValidateString("Please enter a username: ", 1);
+            foreach(Player player1 in _players)
+            {
+                while(_username == player1.UserName)
+                {
+                    _username = Validation.ValidateString("It seems that username already exists\r\nPlease enter a username: ", 1);
+                }
+            }
             _type = Validation.ValidateString("Are you a DM, or an Adventurer?: ", 1);
             while (!(_type.ToLower() == "dm" || _type.ToLower() == "adventurer"))
             {
@@ -167,49 +174,64 @@ namespace Kneiss_Jamie_Final
             }
             if (_type.ToLower() == "dm")
             {
-                if (_dm == null)
-                {
-                    _campaign = Validation.ValidateString("What is your campaign name?: ", 1);
-                    _partySize = Validation.ValidateInt("How many adventurers are in your campaign?: ", 1);
-                    _dm = new DM(_username, _campaign, _partySize);
-                    _players.Add(_dm);
-                }
-                else
-                {
-                    string response = Validation.ValidateString("I'm sorry, it seems there's already a DM.\r\n Would you like to play as an Adventurer?: ", 1);
-                    while (response.ToLower() != "no" && response.ToLower() != "yes")
-                    {
-                        response = Validation.ValidateString("Yes or No, would you like to switch to Adventurer?: ", 1);
-                    }
-                }
+                CreateDM();
             }
             else
             {
-                _charName = Validation.ValidateString("What is your character's name?: ", 1);
-                _menu = new Menu("Human", "Elf", "Dwarf", "Orc");
-                _menu.MinDisplay();
-                _charRace = Validation.ValidateString("What is your character's race?: ", 1);
-                SelectRace(_charRace);
-                _menu = new Menu("Rogue", "Bard", "Wizard", "Fighter");
-                _menu.MinDisplay();
-                _charClass = Validation.ValidateString("What is your character's class?: ", 1);
-                SelectClass(_charClass);
-                RollStats();
-                _adventurer = new Adventurer(_username, _charName, _charRace, _charClass);
-                _players.Add(_adventurer);
-
-                foreach (Player player in _players)
+                CreateAdventurer();
+            }
+            MainMenu();
+        }
+        private void CreateDM()
+        {
+            if (_dm == null)
+            {
+                _campaign = Validation.ValidateString("What is your campaign name?: ", 1);
+                _partySize = Validation.ValidateInt("How many adventurers are in your campaign?: ", 1);
+                _dm = new DM(_username, _campaign, _partySize);
+                _players.Add(_dm);
+            }
+            else
+            {
+                string response = Validation.ValidateString("I'm sorry, it seems there's already a DM.\r\n Would you like to play as an Adventurer?: ", 1);
+                while (response.ToLower() != "no" && response.ToLower() != "yes")
                 {
-                    Console.WriteLine(player.UserName);
-                    Console.WriteLine(player.UserType);
+                    response = Validation.ValidateString("Yes or No, would you like to switch to Adventurer?: ", 1);
                 }
-                foreach (KeyValuePair<string, int> kvp in _adventurer.CharStats)
+                if (response.ToLower() ==  "yes")
                 {
-                    Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+                    CreateAdventurer();
+                }
+                else
+                {
+                    MainMenu();
                 }
             }
-            Console.WriteLine("It seems we're at capacity. Remove a player first or try something else.");
-            MainMenu();
+        }
+        private void CreateAdventurer()
+        {
+            _charName = Validation.ValidateString("What is your character's name?: ", 1);
+            _menu = new Menu("Human", "Elf", "Dwarf", "Orc");
+            _menu.MinDisplay();
+            _charRace = Validation.ValidateString("What is your character's race?: ", 1);
+            SelectRace(_charRace);
+            _menu = new Menu("Rogue", "Bard", "Wizard", "Fighter");
+            _menu.MinDisplay();
+            _charClass = Validation.ValidateString("What is your character's class?: ", 1);
+            SelectClass(_charClass);
+
+            _adventurer = new Adventurer(_username, _charName, _charRace, _charClass);
+            RollStats();
+            _players.Add(_adventurer);
+            int x = 1;
+            foreach (DM dm in _players)
+            {
+                Utility.ChangeCyan($"[{x}]: ");
+                Utility.Feedback($"{ "User Name:",-15}", 3);
+                Console.Write($" {dm.UserName,-12}'s Campaign: ", Console.ForegroundColor = ConsoleColor.DarkMagenta);
+                Console.WriteLine($"{dm.Campaign}");
+                x++;
+            }
         }
         private void DisplayCharacter()
         {
@@ -233,28 +255,49 @@ namespace Kneiss_Jamie_Final
                     _menu.NewTitle("Display Character");
                 }               
                 Console.WriteLine();
-                int x = 0;
+                int x = 1;
                 foreach (Player player in _players)
                 {
-                    Utility.ChangeCyan($"[{x + 1}]: ");
+                    Utility.ChangeCyan($"[{x}]: ");
                     Utility.Feedback($"{ "User Name:",-15}", 3);
                     Console.Write($" {player.UserName,-12}", Console.ForegroundColor = ConsoleColor.DarkMagenta);
-                    Utility.Feedback($" Account Type:", 3);            
-                    
-                    if (player is Adventurer)
+                    Utility.Feedback($" Account Type:", 3);
+                    if (player is DM)
                     {
-                        Utility.Feedback($" {player.UserType,-12}\r\n", 1);
-                        Console.WriteLine($"     {"Character Name:", -15} {((Adventurer)player).CharName}");
-                        Console.WriteLine($"     {"Race:", -15} {((Adventurer)player).Race}");
-                        Console.WriteLine($"     {"Class:", -15} {((Adventurer)player).Class}");
+                        Utility.Feedback($"{player.UserType,-12}\r\n", 1);
                     }
                     else
                     {
-                        Utility.Feedback($" {player.UserType,-12}\r\n", 2);
-                        Console.WriteLine($"     {"Campaign Name:", -15} {((DM)player).Campaign}");
-                        Console.WriteLine($"     {"Party Size:", -15} {((DM)player).PartySize}");
+                        Utility.Feedback($"{player.UserType,-12}\r\n", 2);
                     }
                     x++;
+                }
+                int info = Validation.ValidateInt("Which player you like more information on?: ", 1);
+                while (info < 1 || info > _players.Count)
+                {
+                    Console.Write("Please choose a valid number");
+                    info = Validation.ValidateInt($" between 1 and {_players.Count}", 1);
+                }
+                info -= 1;
+                if (_players[info] is Adventurer)
+                {
+                    Utility.Feedback("Character Info\r\n", 3);
+                    Console.WriteLine($"{"Name:", -12} {((Adventurer)_players[info]).CharName}");
+                }
+                else if (_players[info] is DM)
+                {
+                    Utility.Feedback("Campaign Info\r\n", 3);
+                    Console.WriteLine($"{"Name:",-12} {((DM)_players[info]).Campaign}");
+                    Console.WriteLine($"{"Party Size:",-12} {((DM)_players[info]).PartySize}");
+                    Utility.Feedback("Players", 2);
+                    foreach (Adventurer member in ((DM)_players[info]).Party)
+                    {
+                        Console.WriteLine($"{member.UserName}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Not sure how you managed this one, Good job doofus.");
                 }
                 Console.WriteLine();
             }
@@ -273,31 +316,33 @@ namespace Kneiss_Jamie_Final
                 Utility.Feedback("No such employee", 1);
                 remove = Validation.ValidateInt("Choose a player to remove.", 0);
             }
-
-            Utility.Feedback($"{_players[remove - 1].UserName} has been let go\r\n", 2);
-            Utility.Feedback($"{_players[remove - 1].UserName}: {_players[remove - 1].Quit()}", 1);
-            _players.RemoveAt(remove - 1);
+            remove -= 1;
+            Utility.Feedback($"{_players[remove].UserName} has been let go\r\n", 2);
+            Utility.Feedback($"{_players[remove].UserName}: {_players[remove].Quit()}", 1);
+            _players.RemoveAt(remove);
             Thread.Sleep(750);
             MainMenu();
         }
         private void RollStats()
         {
+            _dice = new Adventurer(_username);
             Console.WriteLine("Let's roll your stats.");
-            int strength = _adventurer.RollStats();
-            _adventurer.CharStats.Add("Strength", strength);
-            int dexterity = _adventurer.RollStats();
+            _adventurer.CharStats = new Dictionary<string, int>();
+            int strength = _dice.StatRoll();
+            _adventurer.CharStats.Add("Strength", strength);           
+            int dexterity = _dice.StatRoll();
             _adventurer.CharStats.Add("Dexterity", dexterity);
-            int constitution = _adventurer.RollStats();
+            int constitution = _dice.StatRoll();
             _adventurer.CharStats.Add("Constitution", constitution);
-            int wisdom = _adventurer.RollStats();
+            int wisdom = _dice.StatRoll();
             _adventurer.CharStats.Add("Wisdom", wisdom);
-            int intelligence = _adventurer.RollStats();
+            int intelligence = _dice.StatRoll();
             _adventurer.CharStats.Add("Intelligence", intelligence);
-            int charisma = _adventurer.RollStats();
+            int charisma = _dice.StatRoll();
             _adventurer.CharStats.Add("Charisma", charisma);
         }
-        #endregion
-        #region File I/O & JSON Data
+#endregion
+#region File I/O & JSON Data
         private void CreateData()
         {
             Directory.CreateDirectory(_directory);
@@ -325,9 +370,17 @@ namespace Kneiss_Jamie_Final
         {
             using (StreamWriter sw = new StreamWriter(_directory + _file))
             {
-                foreach (Player worker in _players)
+                foreach (Player player in _players)
                 {
-                    sw.WriteLine($"{worker.UserName}, {worker.UserType}");
+                    sw.Write($"{player.UserName},");
+                    if (player is DM)
+                    {
+                        sw.Write($"{((DM)player).Campaign},{((DM)player).PartySize}");
+                    }
+                    else
+                    {
+
+                    }
                 }
             }
             Utility.Feedback("Saved Players to File", 2);
@@ -342,22 +395,38 @@ namespace Kneiss_Jamie_Final
                 {
                     string line = sr.ReadLine();
                     string[] data = line.Split(',');
-                    if (data.Length == 3)
+                    if (data.Length == 4)
                     {
                         _username = data[0];
                         _campaign = data[1];
                         _partySize = int.Parse(data[2]);
-                        Player player1 = new DM(_username, _campaign, _partySize);
+                        DM player1 = new DM(_username, _campaign, _partySize);
                         _players.Add(player1);
                     }
                     else
                     {
-                        _username = data[0];
+                         _username = data[0];
                         _charName = data[1];
                         _charRace = data[2];
                         _charClass = data[3];
-                        Player player = new Adventurer(_username, _charName, _charRace, _charClass);
+                        Adventurer player = new Adventurer(_username, _charName, _charRace, _charClass);                       
                         _players.Add(player);
+                        player.CharStats= new Dictionary<string, int>();
+                        string[] stats = data[4].Split('.');
+                        int strength = int.Parse(stats[0]);
+                        player.CharStats.Add("Strength", strength);
+                        //statDic.Add("Strength", strength);                       
+                        int dexterity = int.Parse(stats[1]);
+                        player.CharStats.Add("Dexterity", dexterity);
+                        int constitution = int.Parse(stats[2]);
+                        player.CharStats.Add("Constitution", constitution);
+                        int wisdom = int.Parse(stats[3]);
+                        player.CharStats.Add("Wisdom", wisdom);
+                        int intelligence = int.Parse(stats[4]);
+                        player.CharStats.Add("Intelligence", intelligence);
+                        int charisma = int.Parse(stats[5]);
+                        player.CharStats.Add("Charisma", charisma);
+                        //player.CharStats = statDic;
                     }                    
                 }
             }
@@ -401,6 +470,6 @@ namespace Kneiss_Jamie_Final
             Thread.Sleep(700);
             MainMenu();
         }
-        #endregion
+#endregion
     }
 }

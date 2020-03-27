@@ -30,16 +30,10 @@ namespace Kneiss_Jamie_Final
             Race = charRace;
             Class = charClass;
         }
-        public int RollStats()
+        public Adventurer(string userName) : base(userName)
         {
-            Random rnd = new Random();
-            int roll = 0;
-            for (int i = 0; i < 4; i++)
-            {
-                roll += rnd.Next(1, 6);
-            }
-            return roll;
         }
+
         int IDice.StatRoll()
         {
             Random rnd = new Random();

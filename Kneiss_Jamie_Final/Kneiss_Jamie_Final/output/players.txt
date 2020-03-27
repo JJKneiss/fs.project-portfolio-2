@@ -1,2 +1,4 @@
-JamieK123,Raven's Omen,6
-JeanL890,Laurore,Elf,Wizard
+JamieK123,Raven's Omen,1,JeanLJ890.JessicaG456.BaileyL098
+JeanL456,Laurore,Elf,Wizard,11.10.12.14.15.12
+JessicaG789,Vivian,Human,Fighter,16.11.14.11.10.13
+BaileyL098,Artorias,Elf,Rogue,9.16.11.13.12.15

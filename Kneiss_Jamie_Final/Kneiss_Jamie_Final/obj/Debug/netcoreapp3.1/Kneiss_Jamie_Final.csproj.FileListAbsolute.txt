@@ -20,3 +20,4 @@
 /Applications/Work/School/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/obj/Debug/netcoreapp3.1/Kneiss_Jamie_Final.dll
 /Applications/Work/School/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/obj/Debug/netcoreapp3.1/Kneiss_Jamie_Final.pdb
 /Applications/Work/School/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/obj/Debug/netcoreapp3.1/Kneiss_Jamie_Final.csproj.CoreCompileInputs.cache
+/Applications/Work/School/Project & Portfolio/PP2 2003/Kneiss_Jamie_Final/Kneiss_Jamie_Final/obj/Debug/netcoreapp3.1/Kneiss_Jamie_Final.genruntimeconfig.cache
