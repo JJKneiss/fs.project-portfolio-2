@@ -7,7 +7,8 @@
 | current version: v1.01 | website: https://jjkneiss.wordpress.com/ |
 |:----------------:|-------------|
 
-## Current Features
+## Current Features 
+
 ### User Features	
 
 * User Creation
@@ -27,3 +28,14 @@
 	- Choose Dice Amount
 
 ## Upcoming Features
+
+### User Features
+
+* User Editing
+	- Edit Character
+	- Delete Character
+	- Add to Campaign
+* Campaign Support
+	- Campaign Creation
+	- Combat Events
+	- Add Players to Campaign
