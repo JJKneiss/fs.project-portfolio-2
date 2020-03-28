@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Kneiss_Jamie_Final
 {
-    public abstract class Player
+    public abstract class Player : IComparable<Player>
     {
         public string UserName { get; set; }
         public string UserType { get; set; }
@@ -14,6 +14,14 @@ namespace Kneiss_Jamie_Final
         public virtual string Quit()
         {
             return $"This is {UserName} and I'm finished.";
+        }
+        public int CompareTo(Player other)
+        {
+            if (UserType == other.UserType)
+            {
+                return UserName.CompareTo(other.UserName);
+            }
+            return UserType.CompareTo(other.UserType);
         }
     }
     public class Adventurer : Player, IDice
@@ -32,9 +40,10 @@ namespace Kneiss_Jamie_Final
         }
         public Adventurer(string userName) : base(userName)
         {
+            UserType = "Adventurer";
         }
 
-        int IDice.StatRoll()
+        int IDice.DiceRoll()
         {
             Random rnd = new Random();
             int roll = 0;
@@ -53,7 +62,6 @@ namespace Kneiss_Jamie_Final
     {
         public string Campaign { get; set; }
         public int PartySize { get; set; }
-        public List<Adventurer> Party { get; set; }
         public DM(string userName, string campaignName, int size) : base (userName)
         {
             UserType = "DM";
@@ -67,6 +75,6 @@ namespace Kneiss_Jamie_Final
     }
     public interface IDice
     {
-        int StatRoll();
+        int DiceRoll();
     }
 }
