@@ -318,11 +318,11 @@ namespace Kneiss_Jamie_Final
 
             while (remove > _players.Count || remove < 1)
             {
-                Utility.Feedback("No such employee", 1);
+                Utility.Feedback("No such player", 1);
                 remove = Validation.ValidateInt("Choose a player to remove.", 0);
             }
             remove -= 1;
-            Utility.Feedback($"{_players[remove].UserName} has been let go\r\n", 2);
+            Utility.Feedback($"{_players[remove].UserName} has been deleted\r\n", 2);
             Utility.Feedback($"{_players[remove].UserName}: {_players[remove].Quit()}", 1);
             _players.RemoveAt(remove);
             Thread.Sleep(750);
@@ -332,11 +332,19 @@ namespace Kneiss_Jamie_Final
         {
             Console.Clear();
             _menu.NewTitle("Roll Dice");
-            int number = Validation.ValidateInt("How many dice will you be rolling here?: ", 2);
-            while (number > 9)
+            int number = Validation.ValidateInt("How many dice will you be rolling here?", 2);
+            while (number > 9 || number < 1)
             {
-                number = Validation.ValidateInt("Try rolling less than 10 dice: ", 1);
+                if (number > 9)
+                {
+                    number = Validation.ValidateInt("Try rolling less than 10 dice: ", 1);
+                }
+                else
+                {
+                    number = Validation.ValidateInt("Try rolling more than than 0 dice: ", 1);
+                }
             }
+            Utility.ChangeCyan("Types");
             _menu = new Menu("D4", "D6", "D8", "D10", "D12", "D20");
             _menu.MinDisplay();
             string type = Validation.ValidateString("Which dice type would you like to use?", 2);
@@ -345,31 +353,38 @@ namespace Kneiss_Jamie_Final
         private void SelectDice(string type, int number)
         {
             _dice = new Adventurer(_username);
+            int total = 0;
             switch (type.ToLower())
             {
                 case "1":
                 case "d4":                 
-                    _dice.DiceRoll(4, number);
+                    total = _dice.DiceRoll(4, number);
+                    Console.WriteLine("You rolled a total of: " +total);
                     break;
                 case "2":
                 case "d6":
-                    _dice.DiceRoll(6, number);
+                    total = _dice.DiceRoll(6, number);
+                    Console.WriteLine("You rolled a total of: " + total);
                     break;
                 case "3":
                 case "d8":
-                    _dice.DiceRoll(8, number);
+                    total = _dice.DiceRoll(8, number);
+                    Console.WriteLine("You rolled a total of: " + total);
                     break;
                 case "4":
                 case "d10":
-                    _dice.DiceRoll(10, number);
+                    total = _dice.DiceRoll(10, number);
+                    Console.WriteLine("You rolled a total of: " + total);
                     break;
                 case "5":
                 case "d12":
-                    _dice.DiceRoll(12, number);
+                    total = _dice.DiceRoll(12, number);
+                    Console.WriteLine("You rolled a total of: " + total);
                     break;
                 case "6":
                 case "d20":
-                    _dice.DiceRoll(20, number);
+                    total = _dice.DiceRoll(20, number);
+                    Console.WriteLine("You rolled a total of: " + total);
                     break;
                 default:
                     Validation.Resubmit("invalid input");

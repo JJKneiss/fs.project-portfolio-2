@@ -88,9 +88,7 @@ namespace Kneiss_Jamie_Final
         public override string Quit()
         {
             return $"Alright! Sorry to see you leave, but we look forward to your next epic story, {UserName}";
-        }
-
-        
+        }     
     }
     public interface IDice
     {
