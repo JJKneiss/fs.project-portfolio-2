@@ -43,7 +43,7 @@ namespace Kneiss_Jamie_Final
             UserType = "Adventurer";
         }
 
-        int IDice.DiceRoll()
+        int IDice.StatRoll()
         {
             Random rnd = new Random();
             int roll = 0;
@@ -52,6 +52,19 @@ namespace Kneiss_Jamie_Final
                 roll += rnd.Next(1, 6);
             }
             return roll;
+        }
+        public int DiceRoll(int sides, int number)
+        {
+            Random rnd = new Random();
+            int total = 0;
+            int roll = 0;
+            for (int i = 0; i < number; i++)
+            {
+                roll = rnd.Next(1, sides);
+                Console.WriteLine("You rolled a " + roll);
+                total += roll;
+            }
+            return total;
         }
         public override string Quit()
         {
@@ -68,13 +81,20 @@ namespace Kneiss_Jamie_Final
             Campaign = campaignName;
             PartySize = size;
         }
+        public DM(string userName) : base (userName)
+        {
+            UserType = "DM";
+        }
         public override string Quit()
         {
             return $"Alright! Sorry to see you leave, but we look forward to your next epic story, {UserName}";
         }
+
+        
     }
     public interface IDice
     {
-        int DiceRoll();
+        int DiceRoll(int sides, int number);
+        int StatRoll();
     }
 }

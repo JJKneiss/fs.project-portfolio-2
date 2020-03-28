@@ -224,17 +224,17 @@ namespace Kneiss_Jamie_Final
             _dice = new Adventurer(_username);
             Console.WriteLine("Let's roll your stats.");
             _adventurer.CharStats = new Dictionary<string, int>();
-            int strength = _dice.DiceRoll();
+            int strength = _dice.StatRoll();
             _adventurer.CharStats.Add("Strength", strength);
-            int dexterity = _dice.DiceRoll();
+            int dexterity = _dice.StatRoll();
             _adventurer.CharStats.Add("Dexterity", dexterity);
-            int constitution = _dice.DiceRoll();
+            int constitution = _dice.StatRoll();
             _adventurer.CharStats.Add("Constitution", constitution);
-            int wisdom = _dice.DiceRoll();
+            int wisdom = _dice.StatRoll();
             _adventurer.CharStats.Add("Wisdom", wisdom);
-            int intelligence = _dice.DiceRoll();
+            int intelligence = _dice.StatRoll();
             _adventurer.CharStats.Add("Intelligence", intelligence);
-            int charisma = _dice.DiceRoll();
+            int charisma = _dice.StatRoll();
             _adventurer.CharStats.Add("Charisma", charisma);
         }
         #endregion
@@ -330,6 +330,51 @@ namespace Kneiss_Jamie_Final
         }
         private void RollDice()
         {
+            Console.Clear();
+            _menu.NewTitle("Roll Dice");
+            int number = Validation.ValidateInt("How many dice will you be rolling here?: ", 2);
+            while (number > 9)
+            {
+                number = Validation.ValidateInt("Try rolling less than 10 dice: ", 1);
+            }
+            _menu = new Menu("D4", "D6", "D8", "D10", "D12", "D20");
+            _menu.MinDisplay();
+            string type = Validation.ValidateString("Which dice type would you like to use?", 2);
+            SelectDice(type, number);
+        }
+        private void SelectDice(string type, int number)
+        {
+            _dice = new Adventurer(_username);
+            switch (type.ToLower())
+            {
+                case "1":
+                case "d4":                 
+                    _dice.DiceRoll(4, number);
+                    break;
+                case "2":
+                case "d6":
+                    _dice.DiceRoll(6, number);
+                    break;
+                case "3":
+                case "d8":
+                    _dice.DiceRoll(8, number);
+                    break;
+                case "4":
+                case "d10":
+                    _dice.DiceRoll(10, number);
+                    break;
+                case "5":
+                case "d12":
+                    _dice.DiceRoll(12, number);
+                    break;
+                case "6":
+                case "d20":
+                    _dice.DiceRoll(20, number);
+                    break;
+                default:
+                    Validation.Resubmit("invalid input");
+                    break;
+            }
         }
         #endregion
         #region File I/O & JSON Data
