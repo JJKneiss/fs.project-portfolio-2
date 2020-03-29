@@ -77,8 +77,9 @@ class Assignment{
                 race = "Orc";
                 break;
             default:
-                valid.displayMessage("invalid option, please resubmit")
+                let  _race = valid.askQuestion("invalid option, please resubmit")
                 assignment.mainMenu(["Human", "Elf", "Dwarf", "Orc"]);
+                assignment.selectClass(_race);
                 break;
         }
         return race;
@@ -150,25 +151,38 @@ class Assignment{
         }
         assignment.mainMenu(items);
     }
+    
     rollStats()
     {
         _adventurer = new Adventurer(_username, _charName, _charRace, _charClass);
         console.log("Let's roll your stats.");
         let stats = [];
-        let strength = _dice.StatRoll();        
+        let strength = statRoll();        
         stats.push(strength);
-        let dexterity = _dice.StatRoll();
+        let dexterity = statRoll();
         stats.push(dexterity);
-        let constitution = _dice.StatRoll();
+        let constitution = StatRoll();
         stats.push(constitution);
-        let wisdom = _dice.StatRoll();
+        let wisdom = StatRoll();
         stats.push(wisdom);
-        let intelligence = _dice.StatRoll();
+        let intelligence = StatRoll();
         stats.push(intelligence);
-        let charisma = _dice.StatRoll();
+        let charisma = StatRoll();
         stats.push(charisma);
         _adventurer.CharStats = stats;
+        console.table(_adventurer.CharStats);
     }
+    statRoll()
+        {
+            Math.floor((Math.random() * 6) + 1);
+            let roll = 0;
+            // Roll 4 D6 (6 Sided) Dice To find Each Stat
+            for (let i = 0; i < 4; i++)
+            {
+                roll += Math.floor((Math.random() * 6) + 1);
+            }
+            return roll;
+        }
     characterList()
     {
         if (_players.length == 0){
