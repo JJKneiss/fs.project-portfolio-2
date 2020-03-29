@@ -1,4 +1,5 @@
-let _dice;
+const characters = [];
+const storedCharacters = localStorage.getItem("characters");
 let _username;
 let _type;
 let _campaign;
@@ -6,19 +7,17 @@ let _partySize;
 let _charName;
 let _charRace;
 let _charClass;
-let items = ["Create User", "View User", "Delete User", "Roll Dice"]
-//let menu = new Menu(items);
+let _players = [];
+let items = ["Create User", "View User", "Delete User", "Roll Dice"];
+let valid = new Validation();
+let utility = new Utility();
 let name, race, classes, message;
-
-const characters = [];
-const storedCharacters = localStorage.getItem("characters");
-//let valid = new Validation();
 class Assignment{
 
     constructor(){
         this.players = [];
         this.dm = null;
-        this.adventurer = null;
+        this._adventurer = null;
         this.players = new Array;
         this._removeChar = false;
         this.characters = new Array;
@@ -33,8 +32,7 @@ class Assignment{
         Select();
     }
     createPlayer(event){
-        event.preventDefault();
-        
+        event.preventDefault();        
         console.clear();
         _menu.NewTitle("Create Player");
         _username = askQuestion("Please enter a username: ", 1);
@@ -52,7 +50,7 @@ class Assignment{
             this._campaign = validation.ValidateString("What is your campaign name?: ", 1);
             this._partySize = validation.Validatelet("How many adventurers are in your campaign?: ", 1);
             this._dm = new DM(_username, _campaign, _partySize);
-            _players.Add(_dm);
+            _players.push(_dm);
         }
         else{
             _charName = validation.askQuestion("What is your character's name?: ", 1);
@@ -66,13 +64,13 @@ class Assignment{
             this.SelectClass(_charClass);
             this._adventurer = new Adventurer(_username, _charName, _charRace, _charClass);
             this.RollStats();
-            _players.Add(_adventurer);
+            _players.push(_adventurer);
         }
         MainMenu();
     }
     rollStats()
     {
-        _dice = new Adventurer(_username);
+        this._adventurer = new Adventurer(_username);
         console.log("Let's roll your stats.");
         let stats = [];
         let strength = _dice.StatRoll();        
@@ -94,7 +92,7 @@ class Assignment{
         let validation = new Validation();
         if (_players.Count == 0){
             let utility = new Utility();
-            utility.Feedback("You must first add a player.", 1);
+            utility.Feedback("You must first push a player.", 1);
             menu.MainMenu();
         }
         else
@@ -217,22 +215,18 @@ class Assignment{
 }
 //LISTEN FOR EVENTS
 let assignment =  new Assignment();
-
 const createButton = document.getElementById("submitForm");
 if(createButton){
-    //el.addEventListener('click', swapper, false);
     console.log(createButton);
     createButton.addEventListener("click", assignment.createCharacter);
   }
 const rollButton = document.getElementById("rollDice");
-if(rollButton)
-{
+if(rollButton){
     console.log(rollButton);
     rollButton.addEventListener("click", assignment.diceRoll);
 }
 const viewButton = document.getElementById("view")
-if(viewButton)
-{
+if(viewButton){
     console.log(viewButton);
     viewButton.addEventListener("click", assignment.createPlayer);
 }
