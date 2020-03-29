@@ -1,3 +1,4 @@
+let Title, Divider;
 class Validation
 {
     askQuestion(message)
@@ -78,8 +79,8 @@ class Menu
     Formatting()
     {
         let utility = new Utility();
-        utility.ChangeCyan(Title+"\r\n");
-        console.log(Divider);
+        console.log(this.Title);
+        console.log(this.Divider);
     }
     NewTitle(newTitle)
     {

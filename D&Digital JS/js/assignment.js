@@ -7,48 +7,51 @@ let _charName, _charRace, _charClass;
 let _players = [], items = ["Create User", "View User", "Delete User", "Roll Dice", "Save Data", "Exit"];
 let valid = new Validation(), util = new Utility(), menu = new Menu(items);
 let name, race, classes, message;
-let _adventurer = null, _dm= null;
+let _adventurer, _dm;
 let _removeChar = false;
 class Assignment{
     constructor(){}
-    mainMenu(items){
+    startAll(event){
+        event.preventDefault();
+        assignment.mainMenu(items);
+    }
+    mainMenu(items){   
         console.clear();
         console.table(items);
         assignment.Select();
     }
-    Select()
+    Select(){
+        let userSelection = valid.askQuestion("Make a selection:", 2).toLowerCase();
+        switch (userSelection)
         {
-            let userSelection = valid.askQuestion("Make a selection:", 2).toLowerCase();
-            switch (userSelection)
-            {
-                case "0":
-                    case "create":
-                        assignment.createPlayer();
-                        break;
-                case "1":
-                    case "view":
-                    assignment.characterList();                   
-                    break;
-                case "2":
-                    // Set _removeChar Track
-                    _removeChar = true;
-                    assignment.characterList();
-                    break;
-                case "3":
-                    assignment.rollDice();                    
-                    break;
-                case "4":
-                    assignment.saveData();
-                    break;
-                case "5":
-                    util.Goodbye("Goodbye");
-                    break;
-                default:
-                    valid.displayMessage("invalid option, please resubmit")
-                    assignment.mainMenu(items);
-                    break;
-            }
+            case "0":
+            case "create":
+                assignment.createPlayer();
+                break;
+            case "1":
+            case "view":
+                assignment.characterList();                   
+                break;
+            case "2":
+                // Set _removeChar Track
+                _removeChar = true;
+                assignment.characterList();
+                break;
+            case "3":
+                assignment.rollDice();                    
+                break;
+            case "4":
+                assignment.saveData();
+                break;
+            case "5":
+                util.Goodbye("Goodbye");
+                break;
+            default:
+                valid.displayMessage("invalid option, please resubmit")
+                assignment.mainMenu(items);
+                break;
         }
+    }
     createPlayer(){      
         console.clear();
         console.log("%cCreate Player", "color:yellow");
@@ -88,7 +91,7 @@ class Assignment{
     }
     rollStats()
     {
-        this._adventurer = new Adventurer(_username);
+        _adventurer = new Adventurer(_username);
         console.log("Let's roll your stats.");
         let stats = [];
         let strength = _dice.StatRoll();        
@@ -107,27 +110,28 @@ class Assignment{
     }
     characterList()
     {
-        let valid = new Validation();
-        if (_players.Count == 0){
-            let utility = new Utility();
-            utility.Feedback("You must first push a player.", 1);
+        if (_players.length == 0){
+            valid.displayMessage("You must first push a player");
             assignment.mainMenu();
         }
         else
         {
             _players.sort();
-            Console.Clear();
+            console.clear();
             if (_removeChar == true)
             {
-                _menu.NewTitle("Remove Player");
+                menu.NewTitle("Remove Player");
+                
             }
             else
             {
-                _menu.NewTitle("Display Character");
+                menu.NewTitle("Display Character");
             }
             console.log();
             let x = 1;
+            _players.push
             _players.forEach(element => {
+                console.table(element)
                 console.log(`[${x}]: `);
                 util.Feedback(`${ "User Name:",-15}`, 3);           
                 valid.displayMessage(` ${player.userName,-12}`, console.ForegroundColor = consoleColor.DarkMagenta);
@@ -148,17 +152,20 @@ class Assignment{
                 info = valid.askForNumber(`Please choose a valid number between 1 and ${_players.Count}`);
             }
             info -= 1;
-            if (players[info]  == Adventurer)
+            if (_players[info] === Adventurer)
             {
                 util.Feedback("Character Info\r\n", 3);
-                console.log(`${"Name:",-14} ${(Adventurer).CharName}`);
-                console.log(`${"Race:", -14} ${(Adventurer).Race}`);
+                console.log(`${"Name:",-14} ${players[info].CharName}`);
+                console.log(`${"Race:", -14} ${players[info].Race}`);
                 console.log(`${"Class:", -14} ${(Adventurer).Class}`);
                 util.Feedback("Stats\r\n", 3);
-                foreach(KeyValuePair<string,int> kvp in assignment._adventurer.)
+                foreach(KeyValuePair<string,int> kvp in assignment._adventurer.CharStats)
                 {
                     console.log(`${kvp.Key+":", -14} ${kvp.Value}`);
                 }
+                assignment._adventurer.CharStats.forEach(element => {
+                    
+                });
             }
             else if (_players[info] == DM)
             {
@@ -177,7 +184,7 @@ class Assignment{
     }
     removeCharacter()
     {
-        console.Clear();
+        console.clear();
         _removeChar = true;
         characterList();
         let remove = valid.askForNumber("Choose a player to remove.", 0);
@@ -235,8 +242,13 @@ class Assignment{
 }
 //LISTEN FOR EVENTS
 let assignment =  new Assignment();
-assignment.mainMenu(items);
+//assignment.mainMenu(items);
 
+const startButton = document.getElementById("start");
+if(startButton){
+    console.log(startButton);
+    startButton.addEventListener("click", assignment.startAll);
+}
 const createButton = document.getElementById("submitForm");
 if(createButton){
     console.log(createButton);
