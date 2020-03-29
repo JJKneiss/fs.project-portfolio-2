@@ -17,6 +17,7 @@ namespace Kneiss_Jamie_Final
         }
         public int CompareTo(Player other)
         {
+            // If User Types are Equal, Sort by Username
             if (UserType == other.UserType)
             {
                 return UserName.CompareTo(other.UserName);
@@ -47,6 +48,7 @@ namespace Kneiss_Jamie_Final
         {
             Random rnd = new Random();
             int roll = 0;
+            // Roll 4 D6 (6 Sided) Dice To find Each Stat
             for (int i = 0; i < 4; i++)
             {
                 roll += rnd.Next(1, 6);
@@ -58,10 +60,13 @@ namespace Kneiss_Jamie_Final
             Random rnd = new Random();
             int total = 0;
             int roll = 0;
+            // Roll X amount of Y Sided Dice.
             for (int i = 0; i < number; i++)
             {
+                // Find Roll
                 roll = rnd.Next(1, sides);
                 Console.WriteLine("You rolled a " + roll);
+                // Add Roll to Total
                 total += roll;
             }
             return total;

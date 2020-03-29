@@ -9,11 +9,15 @@ namespace Library
         public string Divider { get; set; }
         private List<string> _items;
 
+        // Accept Array of Values
         public Menu(params string[] items)
         {
+            // Set Title & Divider
             Title = "Main Menu";
             Divider = "===========================";
+            // Create List
             _items = new List<string>();
+            // Turn Array Items to List Format
             _items = items.ToList();
         }
         public void Formatting()
@@ -21,11 +25,13 @@ namespace Library
             Utility.ChangeCyan(Title+"\r\n");
             Console.WriteLine(Divider);
         }
+        // Set New Title According to Input
         public void NewTitle(string newTitle)
         {
             Title = newTitle;
             Formatting();
         }
+        // Display Items Without Formatting & Title
         public void MinDisplay()
         {
             for (int i = 0; i < _items.Count; i++)
@@ -33,6 +39,7 @@ namespace Library
                 Console.WriteLine($"[{i + 1}]: {_items[i]}");
             }
         }
+        // Display Items With Formatting & Title
         public void MaxDisplay()
         {
             Formatting();
@@ -41,11 +48,13 @@ namespace Library
     }
     public class Validation
     {
+        // Prompt Resubmission
         public static void Resubmit(string s)
         {
             Utility.Feedback($"{s}. Press enter to continue.", 1);
             Console.ReadKey();
         }
+        // Validate 1 or More Integer Values
         public static int ValidateInt(string s, int x)
         {
             Utility.ChangeCyan("\n" + s + "\n");
@@ -69,6 +78,7 @@ namespace Library
             }
             return i;
         }
+        // Validate 1 or More String Values
         public static string ValidateString(string s, int i)
         {
             Utility.ChangeCyan(s);
@@ -167,6 +177,7 @@ namespace Library
     }
     public class Utility
     {
+        // Prompt Input to Continue
         public static void Continue(string s)
         {
             Console.WriteLine(s);
@@ -184,13 +195,10 @@ namespace Library
         {
             Console.Clear();
             Console.WriteLine(msg);
-            //Console.ForegroundColor = ConsoleColor.Green;
-            //Console.WriteLine("{0," + ((Console.WindowWidth / 2) + msg.Length / 2) + "}");
-            //Console.ForegroundColor = ConsoleColor.Gray;
-            //Feedback($"{{0, {(Console.WindowWidth / 2) + msg.Length / 2}}}", 2);
         }
+        // Set Color According to Number Input
         public static void Feedback(string s, int i)
-        {
+        {         
             if(i == 1)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -212,6 +220,7 @@ namespace Library
             Console.Write(s);
             Console.ForegroundColor = ConsoleColor.Gray;
         }
+        // Clear Previous Line & Return
         public static void ClearAtLine(int line1,int line2)
         {
             Console.SetCursorPosition(0, Console.CursorTop - line1);

@@ -7,8 +7,7 @@ class Assignment{
         _charName;
         _charRace;
         _charClass;
-    constructor()
-    {
+    constructor(){
         this.validation = new Validation();
         this.assignment = new Assignment();
         this.utility = new Utility();
@@ -17,78 +16,56 @@ class Assignment{
         this.adventurer = null;
         this.players = new Array;
         this._removeChar = false;
+        this.characters = new Array;
         this.CreateData();
         this.LoadData();
         this.MainMenu();
     }
-    CreatePlayer()
-    {
+    mainMenu(){
+        Console.Clear();
+        // Create Main Menu & Display Options
+        _menu = new Menu("Create Player", "View Player", "Remove Player", "Roll Die", "Save", "Exit");
+        _menu.MaxDisplay();
+        // Prompt Choice
+        Select();
+    }
+    createPlayer(){
         console.clear();
         _menu.NewTitle("Create Player");
         _username = this.validation.askQuestion("Please enter a username: ", 1);
         foreach (Player in this.players)
         {
-            while (_username == player1.UserName)
-            {
+            while (_username == player1.UserName){
                 _username = validation.ValidateString("It seems that username already exists\r\nPlease enter a username: ", 1);
             }
         }
         _type = validation.askQuestion("Are you a DM, or an Adventurer?: ", 1);
-        while (!(_type.toLowerCase() == "dm" || _type.toLowerCase() == "adventurer"))
-        {
+        while (!(_type.toLowerCase() == "dm" || _type.toLowerCase() == "adventurer")) {
             _type = validation.askQuestion("I'm sorry, that wasn't right. Please choose a type: DM or Adventurer: ", 1);
         }
-        if (_type.ToLower() == "dm")
-        {
-            CreateDM();
-        }
-        else
-        {
-            CreateAdventurer();
-        }
-        MainMenu();
-    }
-    CreateDM()
-    {
-        if (_dm == null)
-        {
+        if (_type.ToLower() == "dm"){
             this._campaign = validation.ValidateString("What is your campaign name?: ", 1);
             this._partySize = validation.Validatelet("How many adventurers are in your campaign?: ", 1);
             this._dm = new DM(_username, _campaign, _partySize);
             _players.Add(_dm);
         }
-        else
-        {
-            let response = validation.ValidateString("I'm sorry, it seems there's already a DM.\r\n Would you like to play as an Adventurer?: ", 1);
-            while (response.toLowerCase() != "no" && response.ToLower() != "yes")
-            {
-                response = validation.ValidateString("Yes or No, would you like to switch to Adventurer?: ", 1);
-            }
-            if (response.ToLower() == "yes")
-            {
-                CreateAdventurer();
-            }
-            else
-            {
-                MainMenu();
-            }
+        else{
+            _charName = validation.askQuestion("What is your character's name?: ", 1);
+            let _menu = new Menu("Human", "Elf", "Dwarf", "Orc");
+            _menu.MinDisplay();
+            _charRace = validation.askQuestion("What is your character's race?: ", 1);
+            SelectRace(_charRace);
+            _menu = new Menu("Rogue", "Bard", "Wizard", "Fighter");
+            _menu.MinDisplay();
+            _charClass = validation.askQuestion("What is your character's class?: ", 1);
+            this.SelectClass(_charClass);
+            this._adventurer = new Adventurer(_username, _charName, _charRace, _charClass);
+            this.RollStats();
+            _players.Add(_adventurer);
         }
+        MainMenu();
     }
-    CreateAdventurer(){
-        _charName = validation.askQuestion("What is your character's name?: ", 1);
-        let _menu = new Menu("Human", "Elf", "Dwarf", "Orc");
-        _menu.MinDisplay();
-        _charRace = validation.askQuestion("What is your character's race?: ", 1);
-        SelectRace(_charRace);
-        _menu = new Menu("Rogue", "Bard", "Wizard", "Fighter");
-        _menu.MinDisplay();
-        _charClass = validation.askQuestion("What is your character's class?: ", 1);
-        this.SelectClass(_charClass);
-        this._adventurer = new Adventurer(_username, _charName, _charRace, _charClass);
-        this.RollStats();
-        _players.Add(_adventurer);
-    }
-    RollStats(){
+    rollStats(){
         _dice = new Adventurer(_username);
         console.log("Let's roll your stats.");
         let stats = [];
@@ -106,7 +83,7 @@ class Assignment{
         stats.push(charisma);
         this._adventurer.CharStats = stats;
     }
-    DisplayCharacter(){
+    displayCharacter(){
         let validation = new Validation();
         if (_players.Count == 0){
             let utility = new Utility();
@@ -176,7 +153,7 @@ class Assignment{
         }
         _removeChar = false;
     }
-    RemoveCharacter()
+    removeCharacter()
     {
         Console.Clear();
         _removeChar = true;
@@ -190,10 +167,28 @@ class Assignment{
             remove = Validation.ValidateInt("Choose a player to remove.", 0);
         }
         remove -= 1;
-        Utility.Feedback(`${_players[remove].UserName} has been deleted\r\n`, 2);
+        Utility.Feedback(`${this.players[remove]._username} has been deleted\r\n`, 2);
         Utility.Feedback(`${_players[remove].UserName}: {_players[remove].Quit()}`, 1);
         _players.RemoveAt(remove);
         Thread.Sleep(750);
         MainMenu();
+    }
+    //declare array
+    //update array
+    createCharacter(event){
+        event.preventDefault();
+        let name, race, classes, message;
+    
+        name = document.getElementById("name").value;
+        race = document.getElementById("races").value;
+        classes = document.getElementById("classes").value;
+        characters.array.push({ name: name, race: race, classes: classes });
+        //COOKIE
+        localStorage.setItem("characters", JSON.stringify(characters));
+        console.table(characters);
+        message = `${name}, the ${race} ${classes} has arrived. Welcome traveler!`;
+        document.getElementById("your character").innerHTML = message;
+        console.log(message);
+        console.log(localStorage.characters);
     }
 }
