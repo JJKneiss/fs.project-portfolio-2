@@ -5,6 +5,9 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	<link rel= "stylesheet" type="text/css" href="assets/css/dropdown.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/float.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
 <title>Rogue's Galler Dice Roll</title>
 </head>
 <body style="background-color: #242424;">
@@ -19,8 +22,8 @@
 			<li class="dropdown">
 					<button class="dropbtn">Characters</button>
 					<div class="dropdown-content">
-					  <a href="createCharacter.html">Create</a>
-					  <a href="viewCharacter.html">View</a>
+					  <a href="create.html">Create</a>
+					  <a href="view.html">View</a>
 					</div>
 			</li>
 			<li>
@@ -31,8 +34,8 @@
 			<li class="dropdown">
 					<button class="dropbtn">Dice Tests</button>
 					<div class="dropdown-content">
-						<a href="testCombat.html">Combat Test</a>
-						<a href="rollDice.html">Dice Roll</a>
+						<a href="fight.html">Combat Test</a>
+						<a href="roll.html">Dice Roll</a>
 					</div>
 			</li>
 		</ul>   
@@ -50,32 +53,18 @@
 			margin: 5px;
 		}
 	</style>
-	
-	<div id = "wrapper" style="align-content:center;">
-		<div id = "first"> Dice
-				<select id = "dice" name = "Dice">
-					<option value="d4">D4</option>
-					<option value="d6">D6</option>
-					<option value="d8">D8</option>
-					<option value="d10">D10</option>
-					<option value="percentile">D10 - Percentile</option>
-					<option value="d12">D12</option>
-					<option value="d20">D20</option>
-				</select>
-		</div>
-		<div id = "second">Number of Dice
-				<select id = "number" name = "number">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-				</select>
-		</div>		
+	<div id = "target">
 	</div>
 	<div id = "die1" class="dice">0</div>
 	<div id = "die2" class="dice">0</div>
-	<button = onclick="diceRoll()">Roll Dice</button>
+	<div id = "demo" class="dice"></div>
+	<button id = "rollDice" type = "submit">Roll Dice</button>
 	<h2 id="status" style = "clear:left;"></h2>
-	<script src = "js/dice.js"></script>
+	<script>
+		document.getElementById("demo").innerHTML+= "new content"
+	</script>
+	<script type = "text/javascript" src="js/assignment.js"></script>
+	<script src="js/player.js"></script>
+	<script type= "text/javascript" src="js/library.js"></script>
 </body>
 </html>

@@ -1,38 +1,43 @@
+let _dice;
+let _username;
+let _type;
+let _campaign;
+let _partySize;
+let _charName;
+let _charRace;
+let _charClass;
+let items = ["Create User", "View User", "Delete User", "Roll Dice"]
+//let menu = new Menu(items);
+let name, race, classes, message;
+
+const characters = [];
+const storedCharacters = localStorage.getItem("characters");
+//let valid = new Validation();
 class Assignment{
-        _dice;
-        _username;
-        _type;
-        _campaign;
-        _partySize;
-        _charName;
-        _charRace;
-        _charClass;
+
     constructor(){
-        this.validation = new Validation();
-        this.assignment = new Assignment();
-        this.utility = new Utility();
         this.players = [];
         this.dm = null;
         this.adventurer = null;
         this.players = new Array;
         this._removeChar = false;
         this.characters = new Array;
-        this.CreateData();
-        this.LoadData();
-        this.MainMenu();
+        this._menu;
     }
     mainMenu(){
-        Console.Clear();
+        console.Clear();
         // Create Main Menu & Display Options
-        _menu = new Menu("Create Player", "View Player", "Remove Player", "Roll Die", "Save", "Exit");
+        this._menu = new Menu();
         _menu.MaxDisplay();
         // Prompt Choice
         Select();
     }
-    createPlayer(){
+    createPlayer(event){
+        event.preventDefault();
+        
         console.clear();
         _menu.NewTitle("Create Player");
-        _username = this.validation.askQuestion("Please enter a username: ", 1);
+        _username = askQuestion("Please enter a username: ", 1);
         foreach (Player in this.players)
         {
             while (_username == player1.UserName){
@@ -65,7 +70,8 @@ class Assignment{
         }
         MainMenu();
     }
-    rollStats(){
+    rollStats()
+    {
         _dice = new Adventurer(_username);
         console.log("Let's roll your stats.");
         let stats = [];
@@ -83,14 +89,16 @@ class Assignment{
         stats.push(charisma);
         this._adventurer.CharStats = stats;
     }
-    displayCharacter(){
+    displayCharacter()
+    {
         let validation = new Validation();
         if (_players.Count == 0){
             let utility = new Utility();
             utility.Feedback("You must first add a player.", 1);
             menu.MainMenu();
         }
-        else{
+        else
+        {
             _players.Sort();
             Console.Clear();
             if (_removeChar == true)
@@ -103,12 +111,13 @@ class Assignment{
             }
             console.log();
             let x = 1;
-            foreach (Player in this.players){
+            foreach (Player in this.players)
+            {
                 this.CreateAdventurer();
                 let utility = new Utility();
                 utility.ChangeCyan("[{x}]: ");
                 utility.Feedback(`${ "User Name:",-15}`, 3);
-                validation.displayMessage(` ${player.userName,-12}`, Console.ForegroundColor = ConsoleColor.DarkMagenta);
+                validation.displayMessage(` ${player.userName,-12}`, console.ForegroundColor = consoleColor.DarkMagenta);
                 utility.Feedback("Account Type:", 3);
                 if (Player === DM)
                 {
@@ -155,7 +164,7 @@ class Assignment{
     }
     removeCharacter()
     {
-        Console.Clear();
+        console.Clear();
         _removeChar = true;
         DisplayCharacter();
 
@@ -173,22 +182,57 @@ class Assignment{
         Thread.Sleep(750);
         MainMenu();
     }
-    //declare array
-    //update array
     createCharacter(event){
         event.preventDefault();
-        let name, race, classes, message;
-    
         name = document.getElementById("name").value;
         race = document.getElementById("races").value;
         classes = document.getElementById("classes").value;
-        characters.array.push({ name: name, race: race, classes: classes });
+        characters.push({ name: name, race: race, classes: classes });
         //COOKIE
         localStorage.setItem("characters", JSON.stringify(characters));
         console.table(characters);
         message = `${name}, the ${race} ${classes} has arrived. Welcome traveler!`;
         document.getElementById("your character").innerHTML = message;
         console.log(message);
-        console.log(localStorage.characters);
+        console.log(localStorage.storedCharacters);
     }
+    diceRoll(event)
+    {
+        event.preventDefault();
+        var die1 = document.getElementById("die1");
+        var die2 = document.getElementById("die2");
+        var status = document.getElementById("status");
+        var d1 = Math.floor((Math.random() * 6) + 1);
+        var d2 = Math.floor((Math.random() * 6) + 1);
+        var diceTotal = d1 + d2;
+        die1.innerHTML = d1;
+        die2.innerHTML = d2;
+        status.innerHTML = `You rolled ${diceTotal}.`;
+    }
+    viewCharacter(){
+        console.log("   FULL SPEEEEEEEED");
+        console.table(storedCharacters);
+        
+    }
+}
+//LISTEN FOR EVENTS
+let assignment =  new Assignment();
+
+const createButton = document.getElementById("submitForm");
+if(createButton){
+    //el.addEventListener('click', swapper, false);
+    console.log(createButton);
+    createButton.addEventListener("click", assignment.createCharacter);
+  }
+const rollButton = document.getElementById("rollDice");
+if(rollButton)
+{
+    console.log(rollButton);
+    rollButton.addEventListener("click", assignment.diceRoll);
+}
+const viewButton = document.getElementById("view")
+if(viewButton)
+{
+    console.log(viewButton);
+    viewButton.addEventListener("click", assignment.createPlayer);
 }
