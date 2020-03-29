@@ -13,9 +13,9 @@ class Assignment{
         this.assignment = new Assignment();
         this.utility = new Utility();
         this.players = [];
-        this._dm = null;
-        this._adventurer = null;
-        this._players = new Array;
+        this.dm = null;
+        this.adventurer = null;
+        this.players = new Array;
         this._removeChar = false;
         this.CreateData();
         this.LoadData();
@@ -74,8 +74,7 @@ class Assignment{
             }
         }
     }
-    CreateAdventurer()
-    {
+    CreateAdventurer(){
         _charName = validation.askQuestion("What is your character's name?: ", 1);
         let _menu = new Menu("Human", "Elf", "Dwarf", "Orc");
         _menu.MinDisplay();
@@ -89,10 +88,9 @@ class Assignment{
         this.RollStats();
         _players.Add(_adventurer);
     }
-    RollStats()
-    {
+    RollStats(){
         _dice = new Adventurer(_username);
-        Console.WriteLine("Let's roll your stats.");
+        console.log("Let's roll your stats.");
         let stats = [];
         let strength = _dice.StatRoll();        
         stats.push(strength);
@@ -108,17 +106,14 @@ class Assignment{
         stats.push(charisma);
         this._adventurer.CharStats = stats;
     }
-    DisplayCharacter()
-    {
+    DisplayCharacter(){
         let validation = new Validation();
-        if (_players.Count == 0)
-        {
+        if (_players.Count == 0){
             let utility = new Utility();
             utility.Feedback("You must first add a player.", 1);
             menu.MainMenu();
         }
-        else
-        {
+        else{
             _players.Sort();
             Console.Clear();
             if (_removeChar == true)
@@ -129,10 +124,9 @@ class Assignment{
             {
                 _menu.NewTitle("Display Character");
             }
-            Console.WriteLine();
+            console.log();
             let x = 1;
-            foreach (Player in this.players)
-            {
+            foreach (Player in this.players){
                 this.CreateAdventurer();
                 let utility = new Utility();
                 utility.ChangeCyan("[{x}]: ");
@@ -155,30 +149,51 @@ class Assignment{
                 info = validation.askForNumber(`Please choose a valid number between 1 and ${_players.Count}`);
             }
             info -= 1;
-            if (_players[info] is Adventurer)
+            if (players[info]  == Adventurer)
             {
                 Utility.Feedback("Character Info\r\n", 3);
-                Console.WriteLine($"{"Name:",-14} {((Adventurer)_players[info]).CharName}");
-                Console.WriteLine($"{"Race:", -14} {((Adventurer)_players[info]).Race}");
-                Console.WriteLine($"{"Class:", -14} {((Adventurer)_players[info]).Class}");
+                console.log(`${"Name:",-14} ${(Adventurer).CharName}`);
+                console.log(`${"Race:", -14} ${(Adventurer).Race}`);
+                console.log(`${"Class:", -14} ${(Adventurer).Class}`);
                 Utility.Feedback("Stats\r\n", 3);
-                foreach(KeyValuePair<string,int> kvp in ((Adventurer)_players[info]).CharStats)
+                foreach(KeyValuePair<string,int> kvp in this.adventurer.CharStats)
                 {
-                    Console.WriteLine($"{kvp.Key+":", -14} {kvp.Value}");
+                    console.log(`${kvp.Key+":", -14} ${kvp.Value}`);
                 }
             }
-            else if (_players[info] is DM)
+            else if (_players[info] == DM)
             {
                 Utility.Feedback("Campaign Info\r\n", 3);
-                Console.WriteLine($"{"Name:",-12} {((DM)_players[info]).Campaign}");
-                Console.WriteLine($"{"Party Size:",-12} {((DM)_players[info]).PartySize}");                   
+                console.log(`${"Name:",-12} ${DM.Campaign}`);
+                console.log(`${"Party Size:",-12} ${DM.PartySize}`);                   
             }
             else
             {
-                Console.WriteLine("Not sure how you managed this one, Good job doofus.");
+                console.log("Not sure how you managed this one, Good job doofus.");
             }
-            Console.WriteLine();
+            console.log();
+            
         }
         _removeChar = false;
+    }
+    RemoveCharacter()
+    {
+        Console.Clear();
+        _removeChar = true;
+        DisplayCharacter();
+
+        let remove = Validation.ValidateInt("Choose a player to remove.", 0);
+
+        while (remove > _players.Count || remove < 1)
+        {
+            Utility.Feedback("No such player", 1);
+            remove = Validation.ValidateInt("Choose a player to remove.", 0);
+        }
+        remove -= 1;
+        Utility.Feedback(`${_players[remove].UserName} has been deleted\r\n`, 2);
+        Utility.Feedback(`${_players[remove].UserName}: {_players[remove].Quit()}`, 1);
+        _players.RemoveAt(remove);
+        Thread.Sleep(750);
+        MainMenu();
     }
 }
