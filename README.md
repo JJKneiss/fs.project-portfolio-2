@@ -1,4 +1,4 @@
-<p style="text-align: center;"> Welcome to The Rogue's Gallery </p>
+# Welcome to The Rogue's Gallery
 
 ## We're happy to have you roll with us!
 
