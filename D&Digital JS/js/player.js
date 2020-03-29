@@ -28,10 +28,11 @@ class Adventurer extends Player{
     Race;
     Class;
     CharStats;
+    UserType;
     constructor(username, charName, charRace, charClass)
     {
         super(username);
-        UserType = "Adventurer";
+        this.UserType = "Adventurer";
         this.CharName = charName;
         this.Race = charRace;
         this.Class = charClass;

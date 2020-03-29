@@ -14,13 +14,13 @@ class Assignment{
     startAll(event){
         event.preventDefault();
         assignment.mainMenu(items);
+        assignment.select();
     }
     mainMenu(items){   
         console.clear();
         console.table(items);
-        assignment.Select();
     }
-    Select(){
+    select(){
         let userSelection = valid.askQuestion("Make a selection:", 2).toLowerCase();
         switch (userSelection)
         {
@@ -52,6 +52,69 @@ class Assignment{
                 break;
         }
     }
+    selectRace(race)
+    {
+        switch (race)
+        {
+            case "human":
+            case "Human":
+            case "1":
+                race = "Human";
+                break;
+            case "elf":
+            case "Elf":
+            case "2":
+                race = "Elf";
+                break;
+            case "dwarf":
+            case "Dwarf":
+            case "3":
+                race = "Dwarf";
+                break;
+            case "orc":
+            case "Orc":
+            case "4":
+                race = "Orc";
+                break;
+            default:
+                valid.displayMessage("invalid option, please resubmit")
+                assignment.mainMenu(["Human", "Elf", "Dwarf", "Orc"]);
+                break;
+        }
+        return race;
+    }
+    selectClass(cClass)
+        {
+            switch (cClass)
+            {
+                case "rogue":
+                case "Rogue":
+                case "0":
+                    cClass = "Rogue";
+                    break;
+                case "bard":
+                case "Bard":
+                case "1":
+                    cClass = "Bard";
+                    break;
+                case "wizard":
+                case "Wizard":
+                case "2":
+                    cClass = "Wizard";
+                    break;
+                case "fighter":
+                case "Fighter":
+                case "3":
+                    cClass = "Fighter";
+                    break;
+                default:
+                    let _class = valid.askQuestion("invalid option, please resubmit")
+                    assignment.mainMenu(["Human", "Elf", "Dwarf", "Orc"]);
+                    assignment.selectClass(_class);
+                    break;
+            }
+            return cClass;
+        }
     createPlayer(){      
         console.clear();
         console.log("%cCreate Player", "color:yellow");
@@ -75,14 +138,12 @@ class Assignment{
         }
         else{
             _charName = valid.askQuestion("What is your character's name?: ", 1);
-            let _menu = new Menu("Human", "Elf", "Dwarf", "Orc");
-            _menu.MinDisplay();
+            assignment.mainMenu(["Human", "Elf", "Dwarf", "Orc"]);
             _charRace = valid.askQuestion("What is your character's race?: ", 1);
-            SelectRace(_charRace);
-            _menu = new Menu("Rogue", "Bard", "Wizard", "Fighter");
-            _menu.MinDisplay();
+            assignment.selectRace(_charRace);
+            assignment.mainMenu(["Rogue", "Bard", "Wizard", "Fighter"]);
             _charClass = valid.askQuestion("What is your character's class?: ", 1);
-            assignmentSelectClass(_charClass);
+            assignment.selectClass(_charClass);
             _adventurer = new Adventurer(_username, _charName, _charRace, _charClass);
             assignment.rollStats();
             _players.push(_adventurer);
@@ -91,7 +152,7 @@ class Assignment{
     }
     rollStats()
     {
-        _adventurer = new Adventurer(_username);
+        _adventurer = new Adventurer(_username, _charName, _charRace, _charClass);
         console.log("Let's roll your stats.");
         let stats = [];
         let strength = _dice.StatRoll();        
@@ -106,7 +167,7 @@ class Assignment{
         stats.push(intelligence);
         let charisma = _dice.StatRoll();
         stats.push(charisma);
-        this._adventurer.CharStats = stats;
+        _adventurer.CharStats = stats;
     }
     characterList()
     {
