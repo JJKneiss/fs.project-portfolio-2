@@ -11,6 +11,17 @@ class Validation
         console.log("%c" + answer, "color : green");
         return String(answer);
     }
+    consQuest(message)
+    {
+        let answer = prompt(message);
+        console.log(message);
+        while(!answer)
+        {
+            answer = prompt(message);
+        }
+        console.log("%c" + answer, "color : green");
+        return String(answer);
+    }
     stringsOnly(message)
     {
         let answer = prompt(message);
@@ -61,8 +72,8 @@ class Menu
 {
     Menu(items)
     {
-        this.Title = "Main Menu";
-        this.Divider = "===========================";
+        Title = "Main Menu";
+        Divider = "===========================";
     }
     Formatting()
     {

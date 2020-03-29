@@ -4,62 +4,87 @@ const storedCharacters = localStorage.getItem("characters");
 let _username, _type;
 let _campaign, _partySize;
 let _charName, _charRace, _charClass;
-let _players = [], items = ["Create User", "View User", "Delete User", "Roll Dice"];
-let valid = new Validation(), utility = new Utility(), menu = new Menu();
+let _players = [], items = ["Create User", "View User", "Delete User", "Roll Dice", "Save Data", "Exit"];
+let valid = new Validation(), util = new Utility(), menu = new Menu(items);
 let name, race, classes, message;
 let _adventurer = null, _dm= null;
 let _removeChar = false;
 class Assignment{
-    constructor(){
-        this.players = [];
-        this.players = new Array;
-        this.characters = new Array;
-        this._menu;
-    }
-    mainMenu(){
-        console.Clear();
-        // Create Main Menu & Display Options
-        this._menu = new Menu();
-        _menu.MaxDisplay();
-        // Prompt Choice
-        Select();
-    }
-    createPlayer(event){
-        event.preventDefault();        
+    constructor(){}
+    mainMenu(items){
         console.clear();
-        _menu.NewTitle("Create Player");
-        _username = askQuestion("Please enter a username: ", 1);
-        foreach (Player in this.players)
+        console.table(items);
+        assignment.Select();
+    }
+    Select()
         {
-            while (_username == player1.UserName){
-                _username = valid.askQuestion("It seems that username already exists\r\nPlease enter a username: ", 1);
+            let userSelection = valid.askQuestion("Make a selection:", 2).toLowerCase();
+            switch (userSelection)
+            {
+                case "0":
+                    case "create":
+                        assignment.createPlayer();
+                        break;
+                case "1":
+                    case "view":
+                    assignment.characterList();                   
+                    break;
+                case "2":
+                    // Set _removeChar Track
+                    _removeChar = true;
+                    assignment.characterList();
+                    break;
+                case "3":
+                    assignment.rollDice();                    
+                    break;
+                case "4":
+                    assignment.saveData();
+                    break;
+                case "5":
+                    util.Goodbye("Goodbye");
+                    break;
+                default:
+                    valid.displayMessage("invalid option, please resubmit")
+                    assignment.mainMenu(items);
+                    break;
             }
         }
-        _type = validation.askQuestion("Are you a DM, or an Adventurer?: ", 1);
+    createPlayer(){      
+        console.clear();
+        console.log("%cCreate Player", "color:yellow");
+        console.log("--------------------")
+        //menu.NewTitle("Create Player");
+        _username = valid.askQuestion("Please enter a username: ", 1);
+        _players.forEach(element => {
+            while (_username == element.UserName){
+                _username = valid.askQuestion("It seems that username already exists\r\nPlease enter a username: ", 1);
+            }
+        });
+        _type = valid.askQuestion("Are you a DM, or an Adventurer?: ", 1);
         while (!(_type.toLowerCase() == "dm" || _type.toLowerCase() == "adventurer")) {
-            _type = validation.askQuestion("I'm sorry, that wasn't right. Please choose a type: DM or Adventurer: ", 1);
+            _type = valid.askQuestion("I'm sorry, that wasn't right. Please choose a type: DM or Adventurer: ", 1);
         }
-        if (_type.ToLower() == "dm"){
-            this._campaign = validation.ValidateString("What is your campaign name?: ", 1);
-            this._partySize = validation.Validatelet("How many adventurers are in your campaign?: ", 1);
-            this._dm = new DM(_username, _campaign, _partySize);
+        if (_type.toLowerCase() == "dm"){
+            _campaign = valid.askQuestion("What is your campaign name?: ", 1);
+            _partySize = valid.askForNumber("How many adventurers are in your campaign?: ", 1);
+            _dm = new DM(_username, _campaign, _partySize);
             _players.push(_dm);
         }
         else{
-            _charName = validation.askQuestion("What is your character's name?: ", 1);
+            _charName = valid.askQuestion("What is your character's name?: ", 1);
             let _menu = new Menu("Human", "Elf", "Dwarf", "Orc");
             _menu.MinDisplay();
-            _charRace = validation.askQuestion("What is your character's race?: ", 1);
+            _charRace = valid.askQuestion("What is your character's race?: ", 1);
             SelectRace(_charRace);
             _menu = new Menu("Rogue", "Bard", "Wizard", "Fighter");
             _menu.MinDisplay();
-            _charClass = validation.askQuestion("What is your character's class?: ", 1);
-            this.SelectClass(_charClass);
-            this._adventurer = new Adventurer(_username, _charName, _charRace, _charClass);
-            this.RollStats();
+            _charClass = valid.askQuestion("What is your character's class?: ", 1);
+            assignmentSelectClass(_charClass);
+            _adventurer = new Adventurer(_username, _charName, _charRace, _charClass);
+            assignment.rollStats();
             _players.push(_adventurer);
         }
-        MainMenu();
+        assignment.mainMenu(items);
     }
     rollStats()
     {
@@ -80,17 +105,17 @@ class Assignment{
         stats.push(charisma);
         this._adventurer.CharStats = stats;
     }
-    displayCharacter()
+    characterList()
     {
-        let validation = new Validation();
+        let valid = new Validation();
         if (_players.Count == 0){
             let utility = new Utility();
             utility.Feedback("You must first push a player.", 1);
-            menu.MainMenu();
+            assignment.mainMenu();
         }
         else
         {
-            _players.Sort();
+            _players.sort();
             Console.Clear();
             if (_removeChar == true)
             {
@@ -102,38 +127,35 @@ class Assignment{
             }
             console.log();
             let x = 1;
-            foreach (Player in this.players)
-            {
-                this.CreateAdventurer();
-                let utility = new Utility();
-                utility.ChangeCyan("[{x}]: ");
-                utility.Feedback(`${ "User Name:",-15}`, 3);
-                validation.displayMessage(` ${player.userName,-12}`, console.ForegroundColor = consoleColor.DarkMagenta);
-                utility.Feedback("Account Type:", 3);
-                if (Player === DM)
+            _players.forEach(element => {
+                console.log(`[${x}]: `);
+                util.Feedback(`${ "User Name:",-15}`, 3);           
+                valid.displayMessage(` ${player.userName,-12}`, console.ForegroundColor = consoleColor.DarkMagenta);
+                util.Feedback("Account Type:", 3);
+                if (element === DM)
                 {
-                    Utility.Feedback(`${player.UserType,-12}\r\n`, 1);
+                    util.Feedback(`${player.UserType,-12}\r\n`, 1);
                 }
                 else
                 {
-                    Utility.Feedback(`${player.UserType,-12}\r\n`, 2);
+                    util.Feedback(`${player.UserType,-12}\r\n`, 2);
                 }
                 x++;
-            }
-            let info = validation.askQuestion("Which player you like more information on?: ");
+            });
+            let info = valid.askForNumber("Which player you like more information on?: ");
             while (info < 1 || info > _players.Count)
             {
-                info = validation.askForNumber(`Please choose a valid number between 1 and ${_players.Count}`);
+                info = valid.askForNumber(`Please choose a valid number between 1 and ${_players.Count}`);
             }
             info -= 1;
             if (players[info]  == Adventurer)
             {
-                Utility.Feedback("Character Info\r\n", 3);
+                util.Feedback("Character Info\r\n", 3);
                 console.log(`${"Name:",-14} ${(Adventurer).CharName}`);
                 console.log(`${"Race:", -14} ${(Adventurer).Race}`);
                 console.log(`${"Class:", -14} ${(Adventurer).Class}`);
-                Utility.Feedback("Stats\r\n", 3);
-                foreach(KeyValuePair<string,int> kvp in this.adventurer.CharStats)
+                util.Feedback("Stats\r\n", 3);
+                foreach(KeyValuePair<string,int> kvp in assignment._adventurer.)
                 {
                     console.log(`${kvp.Key+":", -14} ${kvp.Value}`);
                 }
@@ -157,18 +179,17 @@ class Assignment{
     {
         console.Clear();
         _removeChar = true;
-        DisplayCharacter();
-
-        let remove = Validation.ValidateInt("Choose a player to remove.", 0);
-
+        characterList();
+        let remove = valid.askForNumber("Choose a player to remove.", 0);
         while (remove > _players.Count || remove < 1)
         {
-            Utility.Feedback("No such player", 1);
-            remove = Validation.ValidateInt("Choose a player to remove.", 0);
+            util.Feedback("No such player", 1);
+            remove = valid.askForNumber("Choose a player to remove.", 0);
         }
         remove -= 1;
-        Utility.Feedback(`${this.players[remove]._username} has been deleted\r\n`, 2);
-        Utility.Feedback(`${_players[remove].UserName}: {_players[remove].Quit()}`, 1);
+        util.Feedback(`${this.players[remove]._username} has been deleted\r\n`, 2);
+        util.Feedback(`${_players[remove].UserName}: {_players[remove].Quit()}`, 1);
+        _players.
         _players.RemoveAt(remove);
         Thread.Sleep(750);
         MainMenu();
@@ -214,6 +235,8 @@ class Assignment{
 }
 //LISTEN FOR EVENTS
 let assignment =  new Assignment();
+assignment.mainMenu(items);
+
 const createButton = document.getElementById("submitForm");
 if(createButton){
     console.log(createButton);
