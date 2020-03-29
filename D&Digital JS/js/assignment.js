@@ -11,15 +11,12 @@ let _adventurer, _dm;
 let _removeChar = false;
 class Assignment{
     constructor(){}
-    startAll(event){
-        event.preventDefault();
-        assignment.mainMenu(items);
-        assignment.select();
-    }
+
     mainMenu(items){   
         console.clear();
         console.table(items);
     }
+
     select(){
         let userSelection = valid.askQuestion("Make a selection:", 2).toLowerCase();
         switch (userSelection)
@@ -52,6 +49,7 @@ class Assignment{
                 break;
         }
     }
+
     selectRace(race)
     {
         switch (race)
@@ -84,6 +82,7 @@ class Assignment{
         }
         return race;
     }
+
     selectClass(cClass)
         {
             switch (cClass)
@@ -115,7 +114,8 @@ class Assignment{
                     break;
             }
             return cClass;
-        }
+    }
+
     createPlayer(){      
         console.clear();
         console.log("%cCreate Player", "color:yellow");
@@ -172,6 +172,7 @@ class Assignment{
         _adventurer.CharStats = stats;
         console.table(_adventurer.CharStats);
     }
+
     statRoll()
         {
             Math.floor((Math.random() * 6) + 1);
@@ -183,6 +184,7 @@ class Assignment{
             }
             return roll;
         }
+
     characterList()
     {
         if (_players.length == 0){
@@ -195,8 +197,7 @@ class Assignment{
             console.clear();
             if (_removeChar == true)
             {
-                menu.NewTitle("Remove Player");
-                
+                menu.NewTitle("Remove Player");              
             }
             else
             {
@@ -257,6 +258,7 @@ class Assignment{
         }
         _removeChar = false;
     }
+
     removeCharacter()
     {
         console.clear();
@@ -276,6 +278,14 @@ class Assignment{
         Thread.Sleep(750);
         MainMenu();
     }
+}
+class DOMStuff{
+    startAll(event){
+        event.preventDefault();
+        assignment.mainMenu(items);
+        assignment.select();
+    }
+
     createCharacter(event){
         event.preventDefault();
         name = document.getElementById("name").value;
@@ -290,6 +300,20 @@ class Assignment{
         console.log(message);
         console.log(localStorage.storedCharacters);
     }
+
+    viewCharacter(event){
+        event.preventDefault();
+        console.table(storedCharacters);
+        let stingArr = storedCharacters.split(",");
+        stingArr.forEach(element => {
+            element = element.replace("[", "");
+            element = element.replace("]", "");
+            element = element.replace("{", "");
+            element = element.replace("}", "");
+            console.log(element);
+        });
+    }
+
     diceRoll(event)
     {
         event.preventDefault();
@@ -303,39 +327,32 @@ class Assignment{
         die2.innerHTML = d2;
         status.innerHTML = `You rolled ${diceTotal}.`;
     }
-    viewCharacter(){
-        console.table(storedCharacters);
-        let stingArr = storedCharacters.split(",");
-        stingArr.forEach(element => {
-            element = element.replace("[", "");
-            element = element.replace("]", "");
-            element = element.replace("{", "");
-            element = element.replace("}", "");
-            console.log(element);
-        });
-    }
 }
 //LISTEN FOR EVENTS
 let assignment =  new Assignment();
-//assignment.mainMenu(items);
+let domStuff = new DOMStuff();
 
+// Listen for Console Start Click
 const startButton = document.getElementById("start");
 if(startButton){
     console.log(startButton);
-    startButton.addEventListener("click", assignment.startAll);
+    startButton.addEventListener("click", domStuff.startAll);
 }
+// Listen for Character Submission Click
 const createButton = document.getElementById("submitForm");
 if(createButton){
     console.log(createButton);
-    createButton.addEventListener("click", assignment.createCharacter);
+    createButton.addEventListener("click", domStuff.createCharacter);
   }
+// Listen for Dice Roll Click
 const rollButton = document.getElementById("rollDice");
 if(rollButton){
     console.log(rollButton);
-    rollButton.addEventListener("click", assignment.diceRoll);
+    rollButton.addEventListener("click", domStuff.diceRoll);
 }
+// Listen for View Characters Click
 const viewButton = document.getElementById("view")
 if(viewButton){
     console.log(viewButton);
-    viewButton.addEventListener("click", assignment.viewCharacter);
+    viewButton.addEventListener("click", domStuff.viewCharacter);
 }
