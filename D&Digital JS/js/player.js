@@ -32,33 +32,10 @@ class Adventurer extends Player{
     {
         super(username);
         UserType = "Adventurer";
-        CharName = charName;
-        Race = charRace;
-        Class = charClass;
-    }
-    StatRoll()
-    {
-        Math.random();
-        let roll = 0;
-        for (int i = 0; i < 4; i++)
-        {
-            roll += rnd.Next(1, 6);
-        }
-        return roll;
-    }
-    DiceRoll(sides, number)
-    {
-        Math.random();
-        let total = 0;
-        let roll = 0;
-        for (int i = 0; i < number; i++)
-        {
-            roll = rnd.Next(1, sides);
-            Console.WriteLine("You rolled a " + roll);
-            total += roll;
-        }
-        return total;
-    }
+        this.CharName = charName;
+        this.Race = charRace;
+        this.Class = charClass;
+    }   
     Quit()
     {
         return `Hope to see you adventuring again someday, ${UserName}!`;

@@ -58,74 +58,71 @@ class Validation
     }
 }
 class Menu
+{
+    Menu(items)
     {
-        List<string> _items;
-
-        Menu(params string[] items)
+        this.Title = "Main Menu";
+        this.Divider = "===========================";
+    }
+    Formatting()
+    {
+        let utility = new Utility();
+        utility.ChangeCyan(Title+"\r\n");
+        console.log(Divider);
+    }
+    NewTitle(newTitle)
+    {
+        this.Title = newTitle;
+        this.Formatting();
+    }
+    MinDisplay()
+    {
+        for (let i = 0; i < _items.Count; i++)
         {
-            this.Title = "Main Menu";
-            this.Divider = "===========================";
-            _items = new List<string>();
-            _items = items.ToList();
-        }
-        Formatting()
-        {
-            Utility.ChangeCyan(Title+"\r\n");
-            console.log(Divider);
-        }
-        NewTitle(newTitle)
-        {
-            this.Title = newTitle;
-            Formatting();
-        }
-        MinDisplay()
-        {
-            for (let i = 0; i < _items.Count; i++)
-            {
-                console.log(`[${i + 1}]: ${_items[i]}`);
-            }
-        }
-        MaxDisplay()
-        {
-            Formatting();
-            MinDisplay();
+            console.log(`[${i + 1}]: ${_items[i]}`);
         }
     }
-    class Utility
+    MaxDisplay()
     {
-        Continue(msg)
+        this.Formatting();
+        this.MinDisplay();
+    }
+}
+class Utility
+{
+    Continue(msg)
+    {
+        console.log(msg);
+        console.ReadKey();
+        console.Clear();
+    }
+    Welcome(msg)
+    {
+        displayMessage(msg);
+        console.clear();
+    }
+    Goodbye(msg)
+    {
+        console.clear();
+        console.log(msg);
+    }
+    Feedback(msg, color)
+    {
+        if(color == 1)
         {
-            console.log(msg);
-            console.ReadKey();
-            console.Clear();
+            console.log("%"+ msg, "color:red");
         }
-        Welcome(msg)
+        else if (color == 2)
         {
-            displayMessage(msg);
-            console.clear();
+            console.log("%"+ msg, "color:green");
         }
-        Goodbye(msg)
+        else
         {
-            console.clear();
-            console.log(msg);
-        }
-        Feedback(msg, color)
-        {
-            if(color == 1)
-            {
-                console.log("%"+ msg, "color:red");
-            }
-            else if (color == 2)
-            {
-                console.log("%"+ msg, "color:green");
-            }
-            else
-            {
-                console.log("%"+ msg, "color:yellow");
-            }
-        }
-        ChangeCyan(msg)
-        {
-            console.log("%"+msg, "color:cyan");
+            console.log("%"+ msg, "color:yellow");
         }
     }
+    ChangeCyan(msg)
+    {
+        console.log("%"+msg, "color:cyan");
+    }
+}
