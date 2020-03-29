@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/float.css">
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
-	<link rel="manifest" href="assets/images/favicon_io/site.webmanifest">
+	<link rel="manifest" href="/site.webmanifest">
 <title>Rogue's Galler Dice Roll</title>
 </head>
 <body style="background-color: #242424;">
@@ -53,45 +53,37 @@
 			margin: 5px;
 		}
 	</style>
-	<form style="margin-left: 30%; margin-top: 1%; margin-right: 30%;">
+
+	<form>
+		<ul>
+			<li>
+				<select id = "number" name = "number">
+					<option value="d4">D4</option>
+					<option value="d6">D6</option>
+					<option value="d8">D8</option>
+					<option value="d10">D10</option>
+					<option value="d12">D12</option>
+					<option value="d20">D20</option>
+				</select>
+			</li>
+		</ul>
 		
-		<div style="text-align: center; color: silver;">
-			<ul>
-				<li>
-					<select id = "number" name = "number">
-						<option value="d4">D4</option>
-						<option value="d6">D6</option>
-						<option value="d8">D8</option>
-						<option value="d10">D10</option>
-						<option value="d12">D12</option>
-						<option value="d20">D20</option>
-					</select>
-					<select id = "number" name = "number">
-						<option value="d4">D4</option>
-						<option value="d6">D6</option>
-						<option value="d8">D8</option>
-						<option value="d10">D10</option>
-						<option value="d12">D12</option>
-						<option value="d20">D20</option>
-					</select>
-				</li>
-			</ul>
-		</div>		
 		<di>
 			<ul id = "dicegoblin">
 				<li id = "die1" class="dice">0</div>
 				<li id = "die2" class="dice">0</div>
 			</ul>
 		</di> 
-		<br>
+		
+	</form>
+	<br>
 		<button id = "rollDice" type = "submit">Roll Dice</button>
 		<button onclick="myFunction()">Insert a paragraph</button>
 		<h2 id="status" style = "clear:left;"></h2>
-	</form>
 	<script>
 		function myFunction() {
 		  var h = document.getElementById("dicegoblin");
-		  h.insertAdjacentHTML("afterbegin", "<li style = \"background: black;\" class = \"dice\">0</li>");
+		  h.insertAdjacentHTML("beforeend", "<li style = \"background: black;\" class = \"dice\">0</li>");
 		}
 	</script>
 	<script type = "text/javascript" src = "js/library.js"></script>

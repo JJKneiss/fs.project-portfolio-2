@@ -5,17 +5,14 @@ let _username, _type;
 let _campaign, _partySize;
 let _charName, _charRace, _charClass;
 let _players = [], items = ["Create User", "View User", "Delete User", "Roll Dice"];
-let valid = new Validation();
-let utility = new Utility();
+let valid = new Validation(), utility = new Utility(), menu = new Menu();
 let name, race, classes, message;
-
+let _adventurer = null, _dm= null;
+let _removeChar = false;
 class Assignment{
     constructor(){
         this.players = [];
-        this.dm = null;
-        this._adventurer = null;
         this.players = new Array;
-        this._removeChar = false;
         this.characters = new Array;
         this._menu;
     }
