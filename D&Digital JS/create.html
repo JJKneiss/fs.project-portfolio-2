@@ -36,32 +36,36 @@
 				</div>
 			</li>
 		</ul>   
-	</div>    
+	</div>
+	<form style="margin-left: 30%; margin-top: 1%; margin-right: 30%;">	
+		<div style="text-align: center; color: silver;">
+			<p>Let's get started</p>
+			<ul style="margin-top: 8%;">
+				<li style="text-align: left;"> Name <br>
+					<input id="name" type="text">
+				</li>
+				<li style="text-align: left;"> Race <br>
+					<select id = "races" name = "Race">
+						<option value="elf">Elf</option>
+						<option value="human">Human</option>
+						<option value="orc">Orc</option>
+						<option value="dwarf">Dwarf</option>
+					</select>
+				</li>			
+				<li style="text-align: left;"> Class <br>
+					<select id= "classes" name= "Class">
+						<option value="fighter">Fighter</option>
+						<option value="bard">Bard</option>
+						<option value="rogue">Rogue</option>
+						<option value="wizard">Wizard</option>
+					</select>   
+				</li>
+			</ul>				
+			<button id="submitForm" type="submit">Submit</button>
+		</div>		
+		<p style = "color: cornsilk; text-align: center;" id = "your character"></p>	
+	</form>
 
-<form style="margin-left: 30%; margin-right: 30%;">
-		<p>Let's get started</p>
-		<h2-color>Name: <input id="name" type="text"></h2-color>
-		<div id = "wrapper" >		
-			<h2 id = "first" class="dropdown">Race
-				<select id = "races" name = "Race">
-					<option value="elf">Elf</option>
-					<option value="human">Human</option>
-					<option value="orc">Orc</option>
-					<option value="dwarf">Dwarf</option>
-				</select>
-			</h2>
-			<h2 id = "second">Class
-				<select id= "classes" name= "Class">
-					<option value="fighter">Fighter</option>
-					<option value="bard">Bard</option>
-					<option value="rogue">Rogue</option>
-					<option value="wizard">Wizard</option>
-				</select>   
-			</h2>
-		</div>
-		<button id="submitForm" type="submit">Submit</button>	
-</form>
-<p id = "your character"></p>
 <script type = "text/javascript" src = "js/library.js"></script>
 <script type = "text/javascript" src = "js/player.js"></script>
 <script type = "text/javascript" src = "js/assignment.js"></script>

@@ -1,19 +1,15 @@
 const characters = [];
 const storedCharacters = localStorage.getItem("characters");
-let _username;
-let _type;
-let _campaign;
-let _partySize;
-let _charName;
-let _charRace;
-let _charClass;
-let _players = [];
-let items = ["Create User", "View User", "Delete User", "Roll Dice"];
+
+let _username, _type;
+let _campaign, _partySize;
+let _charName, _charRace, _charClass;
+let _players = [], items = ["Create User", "View User", "Delete User", "Roll Dice"];
 let valid = new Validation();
 let utility = new Utility();
 let name, race, classes, message;
-class Assignment{
 
+class Assignment{
     constructor(){
         this.players = [];
         this.dm = null;
@@ -39,7 +35,7 @@ class Assignment{
         foreach (Player in this.players)
         {
             while (_username == player1.UserName){
-                _username = validation.ValidateString("It seems that username already exists\r\nPlease enter a username: ", 1);
+                _username = valid.askQuestion("It seems that username already exists\r\nPlease enter a username: ", 1);
             }
         }
         _type = validation.askQuestion("Are you a DM, or an Adventurer?: ", 1);
@@ -208,9 +204,15 @@ class Assignment{
         status.innerHTML = `You rolled ${diceTotal}.`;
     }
     viewCharacter(){
-        console.log("   FULL SPEEEEEEEED");
         console.table(storedCharacters);
-        
+        let stingArr = storedCharacters.split(",");
+        stingArr.forEach(element => {
+            element = element.replace("[", "");
+            element = element.replace("]", "");
+            element = element.replace("{", "");
+            element = element.replace("}", "");
+            console.log(element);
+        });
     }
 }
 //LISTEN FOR EVENTS
@@ -228,5 +230,5 @@ if(rollButton){
 const viewButton = document.getElementById("view")
 if(viewButton){
     console.log(viewButton);
-    viewButton.addEventListener("click", assignment.createPlayer);
+    viewButton.addEventListener("click", assignment.viewCharacter);
 }
