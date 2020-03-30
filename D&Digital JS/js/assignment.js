@@ -148,6 +148,9 @@ class Assignment{
             _adventurer = new Adventurer(_username, _charName, _charRace, _charClass);
             assignment.rollStats();
             _players.push(_adventurer);
+            _players.forEach(element => {
+                element
+            });
         }
         assignment.mainMenu(items);
     }
@@ -280,23 +283,31 @@ class Assignment{
     }
 }
 class DOMStuff{
+    // Begin Console Project
     startAll(event){
         event.preventDefault();
+        // Add Array items to Menu
         assignment.mainMenu(items);
+        // Prompt Selection
         assignment.select();
     }
-
+    // Create Character
     createCharacter(event){
         event.preventDefault();
+        // Pull User Input from Form
         name = document.getElementById("name").value;
         race = document.getElementById("races").value;
         classes = document.getElementById("classes").value;
+        // Push to Array
         characters.push({ name: name, race: race, classes: classes });
         //COOKIE
         localStorage.setItem("characters", JSON.stringify(characters));
+        // Display Character Array in Console
         console.table(characters);
+        // Confirm Creation in DOM
         message = `${name}, the ${race} ${classes} has arrived. Welcome traveler!`;
         document.getElementById("your character").innerHTML = message;
+        // Display Confirmation & Storage in Console
         console.log(message);
         console.log(localStorage.storedCharacters);
     }
@@ -317,14 +328,18 @@ class DOMStuff{
     diceRoll(event)
     {
         event.preventDefault();
+        // Assign Values
         var die1 = document.getElementById("die1");
         var die2 = document.getElementById("die2");
         var status = document.getElementById("status");
+        // Roll Random Number (1-6)
         var d1 = Math.floor((Math.random() * 6) + 1);
         var d2 = Math.floor((Math.random() * 6) + 1);
+        // Sum Rolls
         var diceTotal = d1 + d2;
         die1.innerHTML = d1;
         die2.innerHTML = d2;
+        // Display in DOM
         status.innerHTML = `You rolled ${diceTotal}.`;
     }
 }

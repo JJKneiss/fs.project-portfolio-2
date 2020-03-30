@@ -45,35 +45,24 @@
 			font-size: 24px;
 			text-align: center;
 			margin: 5px;
+			border-radius: 10%;
 		}
 	</style>
 
-	<form>
-		<ul>
-			<li>
-				<select id = "number" name = "number">
-					<option value="d4">D4</option>
-					<option value="d6">D6</option>
-					<option value="d8">D8</option>
-					<option value="d10">D10</option>
-					<option value="d12">D12</option>
-					<option value="d20">D20</option>
-				</select>
-			</li>
-		</ul>
-		
-		<di>
+	<form>						
+		<div style="margin-top: 75px;">
 			<ul id = "dicegoblin">
-				<li id = "die1" class="dice">0</div>
-				<li id = "die2" class="dice">0</div>
+				<li id = "die1" class="dice">0</li>
+				<li id = "die2" class="dice">0</li>
 			</ul>
-		</di> 
-		
+		</div>		
 	</form>
 	<br>
+	<div>
 		<button id = "rollDice" type = "submit">Roll Dice</button>
-		<button onclick="myFunction()">Insert a paragraph</button>
 		<h2 id="status" style = "clear:left;"></h2>
+	</div>
+		
 		<footer id = "footer" style="text-align: center; align-content: center; ">
 			<ul>
 				<li>
