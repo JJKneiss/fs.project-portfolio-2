@@ -1,3 +1,4 @@
+
 class Validation
 {
     askQuestion(message)

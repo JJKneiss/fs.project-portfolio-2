@@ -160,20 +160,20 @@ class Assignment{
         _adventurer = new Adventurer(_username, _charName, _charRace, _charClass);
         console.log("Let's roll your stats.");
         let stats = [];
-        let strength = statRoll();        
+        let strength = assignment.statRoll();        
         stats.push(strength);
-        let dexterity = statRoll();
+        let dexterity = assignment.statRoll();
         stats.push(dexterity);
-        let constitution = StatRoll();
+        let constitution = assignment.statRoll();
         stats.push(constitution);
-        let wisdom = StatRoll();
+        let wisdom = assignment.statRoll();
         stats.push(wisdom);
-        let intelligence = StatRoll();
+        let intelligence = assignment.statRoll();
         stats.push(intelligence);
-        let charisma = StatRoll();
+        let charisma = assignment.statRoll();
         stats.push(charisma);
         _adventurer.CharStats = stats;
-        console.table(_adventurer.CharStats);
+        console.log(_adventurer._userName);
     }
 
     statRoll()
