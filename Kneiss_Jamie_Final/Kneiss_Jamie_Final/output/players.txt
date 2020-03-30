@@ -3,4 +3,5 @@ JeanL456,Laurore,Elf,Wizard,11.10.12.14.15.12
 JessicaG789,Vivian,Human,Fighter,16.11.14.11.10.13
 Crufire723,Tales of Zestris,8
 JamieK123,Raven's Omen,3
+Jerich222,Chthulu,2
 JohnG234,John's Legends,3

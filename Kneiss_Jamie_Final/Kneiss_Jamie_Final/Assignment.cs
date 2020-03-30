@@ -195,8 +195,6 @@ namespace Kneiss_Jamie_Final
         #endregion
 
         #region Assignment Methods
-
-        #region Player Creation
         private void CreatePlayer()
         {
             // Cleare Console & Set Header
@@ -257,6 +255,7 @@ namespace Kneiss_Jamie_Final
             Utility.Continue("Press any key to continue");
             MainMenu();
         }
+
         private void RollStats()
         {
             // Create Instance of Dice Interface.
@@ -277,7 +276,6 @@ namespace Kneiss_Jamie_Final
             int charisma = _dice.StatRoll();
             _adventurer.CharStats.Add("Charisma", charisma);
         }
-        #endregion
 
         private void CharacterList()
         {
@@ -383,6 +381,7 @@ namespace Kneiss_Jamie_Final
             Utility.Continue("Press any key to continue");
             MainMenu();
         }
+
         private void RollDice()
         {
             // Clear & Set Title 
@@ -413,6 +412,7 @@ namespace Kneiss_Jamie_Final
             MainMenu();
         }        
         #endregion
+
         #region File I/O & JSON Data
         private void CreateData()
         {
